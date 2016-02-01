@@ -1,0 +1,18 @@
+body{
+	font:16px sans-serif;
+	font-size-adjust:0.5;
+}
+.box{
+	width:200px;
+	height: 200px;
+	border:solid 2px transparent;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 198px;
+	border-top-color:red;
+	border-left-color:green;
+	border-bottom-color:blue;
+	border-right-color:yellow;
+	border-radius:50%;
+	box-shadow: 0 0 15px #999 inset, 0 0 20px #ccc inset,0 0 10px #222;
+}

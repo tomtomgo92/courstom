@@ -1,0 +1,14 @@
+
+body{
+	
+}
+ul:before{
+	content: "Généralité";
+	font-weight: bolder;
+}
+h1{
+	text-align: center;
+	background: #000;
+	color:#fff;
+	margin-top: 0px;
+}

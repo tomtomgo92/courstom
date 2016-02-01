@@ -1,0 +1,64 @@
+body{
+	background: #fff;
+}
+header{
+	
+}
+header>p{
+	color: #fff;
+	background: #1976d2;
+	margin: 0;
+	height: 30px;
+	width:100%;
+	line-height: 30px;
+	font-size: 14px;
+	position: fixed;
+	top: 0;
+}
+.content{
+	height: 450px;
+	width: 400px;
+	margin: 200 auto;
+
+}
+.img{
+	max-height: 150px;
+max-width: 200px;
+width: 120px;
+height: 120px;
+	background:url(https://www.google.com/logos/doodles/2015/sally-rides-64th-birthday-4870670991228928-hp2x.gif) no-repeat center center;;
+}
+.recherche{
+
+}
+input[type="text"]{
+	height: 19px;
+	width: 500px;
+	margin-bottom: 10px;
+}
+input[type="submit"]{
+	height: 29px;
+	width: 150px;
+	color: #222;
+	background: #fff;
+	border: solid 1px;
+}
+
+footer{
+	background: #F2F2F2;
+	height: 30px;
+	margin-bottom: 0px;
+	width: 100%;
+	bottom: 0;
+}
+li{
+	list-style: none;
+	display: block;
+	float: left;
+	margin-right: 10px;
+}
+a{
+	text-decoration: none;
+	color: #222;
+	margin: 0px;
+}

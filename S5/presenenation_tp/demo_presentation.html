@@ -1,0 +1,42 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+<title>jQuery</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/screen.css" type="text/css" media="screen" />
+</head>
+<body>
+<h1 id="titre" class="rouge">Débuter en jQuery</h1>
+<h3 id="sous">Evénement</h3>
+<button id="bouton_alerte" class="btn alert-btn">Warning</button>
+
+<hr />
+<script type="text/javascript">
+$(function(){
+	// $('#titre').fadeIn(500);
+	// $('.btn').click(function(e){
+	// $('#sous , #titre').hide(200);
+	// });
+$('#bouton_alerte').click(function(){
+
+	$('.rouge').fadeIn("slow",function(){
+		$(this).delay(100).fadeOut("slow");
+	$('h1').text('Débuter en jQuery');
+	});
+
+	$('.rouge').fadeOut("slow",function(){
+		$(this).delay(100).fadeIn("slow");
+	$('#titre').fadeIn('400').text('Hello worl. Ce texte est affiché par JQuery');
+	});
+	
+	$('h3').fadeOut("slow",function(){
+		$(this).delay(800).fadeIn("slow");
+	$('#sous').text('Evenement jQuery');
+	});
+});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+body{
+	font: 16px 'Open Sans', sans-serif;
+	background: #F2F2F2;
+}
+header{
+	text-align: center;
+	background: #0073C6;
+	width: 600px;
+	margin: 0 auto;
+	line-height: 65px;
+}
+h1{
+	color: #FFFFFF;
+	margin:0;
+}
+h1:before{
+	content: url(../img/1429025598_microsoft-48.png);
+	vertical-align: -15px;
+}
+.contair{
+	background: #0073C6;
+	width: 600px;
+	padding-bottom:20px;
+	margin: 10px auto;
+	
+}
+img{
+	margin: 0 auto;
+	display: block;
+	width: 60%;
+}
+a{
+	display: block;
+	width: 115px;
+	text-decoration: none;
+	border: solid 1px #FFFFFF;
+	background: #FFFFFF;
+	padding-left: 0px; 
+	margin-left: 50px;
+	color: #0073C6;
+	line-height: 35px;
+
+}
+p,h2{
+	color: #FFFFFF;
+	margin: 0 auto;
+	padding: 0px 0px 0px 50px;
+}

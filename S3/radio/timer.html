@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/002mo.css">
+		<link rel="stylesheet" type="text/css" href="css/radio.css">
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.3.0/css/font-awesome.css">
+	<!--[if IE]>
+    <script type="text/javascript" src="js/modernizr.custom.78869.js">
+    </script>
+<![endif]-->
+</head>
+<body>
+	<div class="container">
+		<h1>L'ecouteur d'evenement</h1>
+	<p id="affiche"></p>
+
+<button id="myButton">annuler le compte a rebours</button>
+<p id="afficheCompte"></p>
+	</div>
+
+<script type="text/javascript">
+	(function(){
+		var compte=document.getElementById("afficheCompte");
+		var button=document.getElementById("myButton");time= 10;
+		var timerID=setTimeout(function(){
+	
+	clearInterval(intervalID);
+			compte.innerHTML="Annuler le compte a rebours (0s)";
+			alert("vous n'etes pas tres reactif vous !");
+		}, 10000);
+
+		var intervalID=setInterval(function(){
+		compte.innerHTML="annuler les compte a rebours (" + --time + "s)";
+		if(time<=5){
+		alert("coucou")
+	}
+
+	}, 1000);
+
+	button.onclick=function(){
+		clearTimeout(timerID);
+		clearInterval(intervalID);
+		alert("le compte est annulé")
+	};
+	
+	})();
+
+
+
+</script>
+
+</body>
+</html>

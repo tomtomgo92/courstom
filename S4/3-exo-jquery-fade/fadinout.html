@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>jQuery</title>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	<style>
+		body{
+		font:16px sans-serif;
+		font-family: 'Ubuntu Condensed', sans-serif;
+	}
+		.box{
+			width:32.25806451612903%;
+			display:none;
+			float:left;
+			visibility:hidden;
+			margin-right:10px;
+			overflow:hidden;
+			border-radius:4px;	
+		}
+		.box1-color{
+			background: red;
+			
+		}
+		.box2-color{
+			background: green;
+		}
+		.box3-color{
+			background: blue;
+			margin-right:0;
+		}
+		button{
+			display:block;
+			line-height:2.500rem;
+			text-align:center;
+			background:#3498db;
+			color:#fff;
+			border-radius:3px;
+			border:none;
+			margin:0 auto 20px;
+			cursor:pointer;
+			transition-duration:0.6s;
+		}
+		button:hover{
+			background:#2980b9;
+		}
+
+	 .container{
+		width:620px;
+		margin:0 auto;
+		overflow:hidden;
+	 }
+	 h1{
+		text-align:center;
+		font-weight:300;
+		color:#3A89B0;
+	 }
+	 img{
+		display:block;
+		width:100%;
+		opacity:0.8;
+	 }
+	 hr{
+		height:1px;
+		border:0;
+		background:#ccc;
+	 }
+	</style>
+</head>
+
+<body>
+	<h1>Afficher les photos</h1>
+	<button>Afficher les photos</button>
+<hr />
+	<div class="container">
+		<div id="div1" class="box box1-color"><img src="images/01.jpg" alt="image" /></div>
+		<div id="div2" class="box box2-color"><img src="images/02.jpg" alt="image" /></div>
+		<div id="div3" class="box box3-color"><img src="images/03.jpg" alt="image" /></div>
+	</div>
+
+	<script>
+	$(function(){
+
+		 $('button').on('click',function(e){
+
+if($(".box").is(":hidden")){
+
+	$(".box").css({"visibility":"visible"});
+	$("#div1, #div2, #div3").fadeIn(400);
+	e.stopPropagation();
+    						}
+else{
+	$("#div1, #div2, #div3").fadeOut(400);
+	e.stopPropagation();
+	}
+});
+	$("html").click(function(e){
+    $("#div1, #div2, #div3").fadeOut(400);
+    e.stopPropagation();
+    });
+
+	$("img").click(function(e){
+  
+    e.stopPropagation();
+    });
+
+});
+	</script>
+</body>
+</html>

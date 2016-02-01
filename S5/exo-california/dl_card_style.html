@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Menu dans une liste</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="Card.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome-4.3.0/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="open-iconic-master/font/css/open-iconic.css">
+	<link rel="icon" type="image/png" href="image/logo.png">
+</head>
+<body>
+
+
+	<h1>Exemple Card Flat</h1>
+	<dl class="primary-nav">
+		<dt>
+			<div class="icons menu"><span class="oi space" data-glyph="menu"></span></div>
+				<div class="icons all"><i class="fa fa-bars"></i>Travel stream</div>
+			<div class="icons other"><span class="oi" data-glyph="pencil"></span></div>
+		</dt>
+		<dd>
+			<!--figure-->
+			<figure>
+				<img src="image/06.jpg" alt="image">
+				<div class="annonce"> <h2>Top 10 California</h2></div>
+				<figcaption>
+					<h3>Number 1</h3>
+					<h4>Goldengate is established fact that a reader</h4>
+					<h5>share</h5>
+				</figcaption>
+			</figure>
+			
+			<!--end-->
+		</dd>
+	</dl>
+	<script type="text/javascript">
+		$(function(){
+			$('.icons').click(function(e){
+				$('figure').fadeToggle();
+				e.stopPropagation();
+
+			})
+			$('html').on("click",function(e){
+				$('figure').fadeOut();
+				e.stopPropagation();
+
+			})
+			$('figure').on("click",function(e){
+				e.stopPropagation();
+
+			})
+		});
+	</script>
+	
+</body>
+</html>

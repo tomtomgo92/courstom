@@ -1,0 +1,35 @@
+section{
+	font: 100px sans-serif;
+	margin: 0 auto;
+	width: 400px;
+	height: 200px;
+	position: relative;
+	border: solid 1px #999;
+	overflow: hidden;
+}
+section figure{
+	margin: 0px;
+	position: absolute;
+	z-index: 1;
+	transition-duration:0.5s;
+	bottom: -120px;
+}
+section:hover figure{
+	bottom: 105px;
+	cursor: pointer;
+}
+section figure figcaption p{
+	margin: 0;
+	text-align: center;
+	color: #000;
+	padding: 3px;
+	font-size: 0.70rem;
+	text-align: justify;
+}
+section figure img{
+	width: 400px;
+	display: block;
+}
+section figure figcaption p:first-line{
+	font-size: x-large;
+}

@@ -1,0 +1,51 @@
+body{
+	font: 16px 'Josefin Sans', sans-serif;
+	margin: 0;
+}
+h1{
+	text-align: center;
+	font-weight: 100;
+	color: #fff;
+	text-transform: capitalize;
+	width: auto;
+	margin: 0 auto;
+	background: #222;
+	line-height: 60px;
+	font-size:2.5rem;
+}
+.image{
+	width: 400px;
+	display: inline-block;
+}
+.cont{
+	width: 816px;
+	margin: 10px auto 0;
+}
+img{
+	display: block;
+	width: 100%;
+	padding: 5px;
+}
+@media screen and (max-width: 1024px){
+
+.image{
+	width: auto;
+	display: block;
+	margin:0.625rem;
+}
+.cont{
+	width: auto;
+	
+	
+}
+img{
+	display: block;
+	padding:0;
+	
+}
+h1{
+	font-size: 5vw;
+}
+
+
+}

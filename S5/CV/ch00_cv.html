@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>JQuery</title>
+	<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Comfortaa:400,300">
+
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	
+	<link rel="stylesheet" href="screen.css" type="text/css" media="screen" />	
+</head>
+<body>
+	<style>
+		#navigateurs{
+			display: none;
+		}
+	</style>
+<div id="content">
+
+
+
+	<div class="enteteCV">
+	Mark<br />
+	<div id="divage"></div>
+	E-mail : <a href="mailto:giusmili@gmail.com">mark@gmail.com</a>
+	</div>
+	<div id="titreCV" class="titreCV">
+	<h1>Développeur Web</h1>
+	</div>
+	<!--section1-->
+	<div class="titreSection">Expériences :</div>
+	<div class="dateCV">2010</div>
+	Freelance développement web<br />
+	<div class="dateCV">2007</div>
+	Refonte des sites web de la société Facesoft<br />
+	<!--section2-->
+	<div class="titreSection">Formation :</div>
+	<div class="dateCV">2011-2012</div>
+	Mach 3 informatique
+	<br />
+	<div class="dateCV">2009-2011</div>
+	IUT Cergy<br />
+	<div class="dateCV">2007</div>
+	Bac ES<br />
+
+	<!--section2-->
+	<div class="titreSection" id="divers"> Divers :</div>
+	- Photoshop<br />
+	- Musique<br />
+	- Musique<br />
+	- <a href="#" class="btn-plus-info">Plus d'infos...</a><br />
+	- <a href="#" class="btn-plus-exp">Plus d'explication...</a>
+	<div class="titreSection" id="navigateurs">Navigateurs</div>
+<table id="contenu">
+		<tr>
+		<th>$(Fonction)</th>
+		<th>$(Effet)</th>
+		</tr>
+		<tr>
+			<td>.after('MonContenu')</td>
+			<td>Insere monContenu apres l'element selectionné</td>
+		</tr>
+		<tr>
+			<td>.before('MonContenu')</td>
+			<td>Insere monContenu avant l'element selectionné</td>
+		</tr>
+		<tr>
+			<td>.html('MonContenu')</td>
+			<td>Remplace le contenu de l'element selectionné par mon elements</td>
+		</tr>
+		<tr>
+			<td>.append('MonContenu')</td>
+			<td>Insere monContenu dans l'element selectionné à la suite des elements existant</td>
+		</tr>
+		<tr>
+			<td>.prepend('MonContenu')</td>
+			<td>Insere monContenu dans l'element selectionné avant les elements existants</td>
+		</tr>
+		<tr>
+			<td>.wrap('MonContenu')</td>
+			<td>Entoure l'element selectionné par la balise passée en parametre</td>
+		</tr>
+		<tr>
+			<td>.wrapInner('MonContenu')</td>
+			<td>Entoure les enfants de l'element selectionné par la balise passée en parametre</td>
+		</tr>
+</table>
+
+	</div>
+
+		<script type="text/javascript">
+		$(function(){
+			$('.btn-plus-info').click(function(){
+				$('#navigateurs').show(200);
+				$('#contenu').hide(0);
+				$('#navigateurs').html(navigator.userAgent).css('text-align','center');
+
+			});
+			$('title').html("Cv jQuery");
+		//ajouter un style
+		$('.titreSection').css({
+			"border" : "1px solid #93261A","color" : 
+			"#fff","background-color": "#CA3B2B"
+			});
+			$('a').css({
+			"text-decoration" : "none","color" : "#3B5998"
+			});
+		});
+		//$('.titreSection').addClass('titreBleu');
+		//alert("Alerte classique");
+
+			$('.btn-plus-exp').click(function(){
+			$('#contenu').show("slide");
+			$('#navigateurs').hide(0);
+
+			});
+
+			var maintenant=new Date();
+			var maDateNaissance=new Date(1988, 03, 14);
+			var monAge=maintenant.getFullYear()-maDateNaissance.getFullYear();
+
+			if (maDateNaissance.getMonth()>maintenant.getMonth()) {
+				monAge--;
+			}
+			else if (maintenant.getMonth()==maDateNaissance.getMonth()&& maDateNaissance.getDate()>=maintenant.getDate()) {
+				monAge--;
+			}
+			$('#divage').html(monAge+ ' ans');
+			$('#divers').after('- Horaires souple (weekend...)<br/>');
+		
+		</script>
+
+</body>
+</html>

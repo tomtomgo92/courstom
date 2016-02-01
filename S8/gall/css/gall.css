@@ -1,0 +1,42 @@
+body{
+	font: 16px 'roboto',sans-serif;
+	font-size-adjust: 0.5;
+}
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+h1,h2,h3{
+	font-weight: 400;
+	font-size: 1.9rem;
+}
+h1{
+	text-align: center;
+	text-transform: capitalize;
+}
+img{
+	display: inline-block;
+	max-width: 100%;
+	background: #fff;
+	padding: 10px;
+	box-shadow: 0 0 2px rgba(0,0,0,0.2);
+	margin-top: 5px;
+	border:solid 1px #ccc;
+}
+.row{
+	width: 1080px;
+	margin: 0 auto;
+	text-align: center;
+}
+.inner-box{
+	width: 37.037037037%;
+	margin: 10px auto;
+}
+.inner-box>img{
+	width: 100%;
+	display: block;
+}
+.row>.miniature{
+	width: 10%;
+}

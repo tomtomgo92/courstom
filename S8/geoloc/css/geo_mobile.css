@@ -1,0 +1,10 @@
+@media screen and (max-width: 1080px) {
+  #map{
+  margin: 0 auto;
+  height: 400px;
+  width: auto;
+  }
+  body{
+    padding:5px;
+  }
+}

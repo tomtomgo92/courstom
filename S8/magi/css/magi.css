@@ -1,0 +1,41 @@
+body{
+	font: 16px 'Roboto', sans-serif;
+	font-size-adjust:0.5; 
+}
+h1,h2,h3{
+	font-weight: 400;
+	font-size: 1.9rem;
+}
+h1{
+	text-align: center;
+	text-transform: capitalize;
+}
+img{
+	display: inline-block;
+	width: 30%;
+	background: #fff;
+	padding: 10px;
+	box-shadow: 0 0 5px rgba(0,0,0,0.2);
+	margin-top: 5px;
+}
+.row{
+	width: 800px;
+	margin: 0 auto;
+	text-align: center;
+}
+button{
+	display: block;
+	border:0;
+	line-height: 35px;
+	width: 200px;
+	margin:0 auto 5px;
+	background: #0288d1;
+	text-align: center;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 1rem;
+	cursor: pointer;
+}
+#affiche, #cache{
+	width: 450px;
+}

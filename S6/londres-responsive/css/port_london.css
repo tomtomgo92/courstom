@@ -1,0 +1,26 @@
+@media screen and (max-width: 1024px){
+
+body{
+	background: #F0F0F0;
+}
+.row{
+	margin: 10px;
+	width: auto;
+}
+.row>img{
+	width: auto;
+	padding: 0px;
+
+}
+p{
+	display: none;
+}
+nav{
+	display: none;
+}
+.menuPort{
+	display: block;
+	margin: 10px;
+}
+
+}

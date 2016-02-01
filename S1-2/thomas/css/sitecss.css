@@ -1,0 +1,57 @@
+body{
+font:16px 'Open Sans',Sans-serif;
+}
+
+h1{
+font-weight: 300;
+color:#3a8;
+text-align: center;
+margin:0 0 10px 0;
+}
+
+section{
+width: 345px;
+margin: 10px auto;
+border:solid 1px #ccc;
+padding: 10px;
+background: #fff;
+color: #999;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-szing: border-box;
+-webkit-box-shadow: 0px 0px 5px #ccc;
+box-shadow: 0px 0px 5px #ccc;
+}
+
+.text-info{
+color:#3a8;
+padding: 10px;
+}
+
+address{
+font-style: normal;
+margin-bottom: 20px;
+font-size:14px;
+line-height: 20px;
+}
+
+article{
+margin-bottom:25px;
+font-size:14px;
+color:#999;
+}
+
+a{
+color: #0088cc;
+text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+h1:before{
+	content:url(../image/1437054853_Significon-Twitter.png);
+	vertical-align: -18px;
+
+}

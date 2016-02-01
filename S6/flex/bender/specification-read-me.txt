@@ -1,0 +1,6 @@
+taille en largeur du container : 369px
+la pastille "12 mai" bg : #FF0000;
+pour le carré en bas de la photo bg : #FFA500
+Police de caractère : Open Sans =>google font
+Pour le titre h1 color : #666
+pour le titre h2 color : #FFA500

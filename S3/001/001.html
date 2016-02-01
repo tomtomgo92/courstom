@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="Fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<link rel="stylesheet" type="text/css" href="js/modernizr.custom.78869.js">
+	<link rel="stylesheet" type="text/css" href="css/001mo.css">
+	<link rel="stylesheet" type="text/css" href="css/001.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome-4.3.0/css/font-awesome.css">
+	<!--[if IE]>
+    <script type="text/javascript" src="js/modernizr.custom.78869.js">
+    </script>
+<![endif]-->
+</head>
+<body>
+	<script type="text/javascript">
+(function(){
+	document.title="JS et HTML";
+var titre="<h1>Mon Fichier</h1>"
+
+var tabUser=new Array("Thomas","Mill","27 ans","Paris");
+var otherData=new Array("allo","ici","le pere","nouel");
+document.write(titre);
+
+document.write("<ul>");
+for(i=0; i<tabUser.length; i++){
+document.write("<li>"+tabUser[i]+"</li>");
+}
+for(i=0; i<4; i++){
+document.write("<li>"+otherData[i]+"</li>");
+}
+
+document.write("</ul>");
+
+var myCity=new Array("paris","rome","new york")
+var myNombre=-1;
+while(myNombre<2){
+	myNombre++;
+	alert(myCity[myNombre])
+}
+
+})()
+
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/002mo.css">
+		<link rel="stylesheet" type="text/css" href="css/radio.css">
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.3.0/css/font-awesome.css">
+	<!--[if IE]>
+    <script type="text/javascript" src="js/modernizr.custom.78869.js">
+    </script>
+<![endif]-->
+</head>
+<body>
+	<div class="container">
+		<form>
+			<input type="radio" name="choix" value="homme"/>Sexe masculin</br>
+			<input type="radio" name="choix" value="feminin"/>Sexe feminin</br>
+	<p>
+		<input type="button" name="choix" value="Quel est votre choix ?"id="btn"/>
+	</p>
+		</form>
+<div id="affiche"></div>
+
+	<script type="text/javascript">
+		var myBtn=document.querySelector("#btn");
+		function civilitee(){
+		if (!check.checked) {
+		document.getElementById("affiche").innerHTML=check;
+							}
+		}
+		myBtn.addEventListener("click",civilitee);
+	</script>
+
+</div>
+</body>
+</html>

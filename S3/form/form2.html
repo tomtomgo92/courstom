@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/002mo.css">
+		<link rel="stylesheet" type="text/css" href="css/form2.min.css">
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.3.0/css/font-awesome.css">
+		<link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+	<!--[if IE]>
+    <script type="text/javascript" src="js/modernizr.custom.78869.js">
+    </script>
+<![endif]-->
+</head>
+<body>
+	<h1><i class="fa fa-unlock-alt"></i> Connexion sur votre compte</h1>
+<div class="form-action">
+	<form>
+		<p class="error"></p>
+		<div class="login">
+			<label>Login</label>
+			<input type="text" name="login" placeholder="login">
+		</div>
+		<div class="psw">
+		  	<label>Mot de passe</label>
+		  	<input type="text" name="mdp" placeholder="passeword" id="psw">
+		</div>
+		<div class="mail">
+		  	<label>Mail</label>
+		  	<input type="text" name="mail" placeholder="Adresse mail" id="mail">
+		</div>
+		<div class="condition" >
+		  	<input type="checkbox" name="condition" value="yes" id="condition">
+		  	<label class="margin">  Accepter les conditions</label>
+		</div>
+		<div class="btn">
+		  	<input type="button" value="Envoyer" id="btn">
+		</div>
+	</form>
+</div>
+<script type="text/javascript">
+
+btn.addEventListener("click",validForm,false);
+
+
+</script>
+
+</body>
+</html>

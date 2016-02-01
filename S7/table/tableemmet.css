@@ -1,0 +1,37 @@
+body{
+	font: 16px sans-serif;
+}
+table{
+	margin: 0 auto;
+	width: 800px;
+	line-height: 40px;
+	text-align: center;
+	border-collapse: collapse;
+}
+td{
+border: 1px solid;
+}
+tr:last-child, tr:first-child{
+
+	background: #ccc;
+}
+caption{
+	margin-bottom: 5px;
+	font-size: large;
+}
+details{
+	width: 800px;
+	margin: 10px auto;
+	display: block;
+}
+summary{
+	color: #1F73F2;
+	outline: none;
+}
+p{
+	margin: 0 auto;
+	width: 800px;
+}
+p::first-line{
+	font-size: x-large;
+}

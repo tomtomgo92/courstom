@@ -1,0 +1,34 @@
+.coll{
+	position: absolute;
+	top: 100px;
+}
+body {
+	background: #000000;
+    padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+}
+iframe{
+ position: absolute; 
+
+ width: 100%; 
+ height: 865px; 
+ top: 0px; 
+ left: 0px; 
+ overflow: hidden; 
+ opacity: 1; 
+ margin-top: 0px; 
+ margin-left: 0px; 
+ filter: grayscale(85%) 
+ hue-rotate(150deg) 
+ brightness(175%) 
+ contrast(56%); 
+ transition-property: opacity; 
+ transition-duration: 1000ms;"
+}
+.hero-unit{
+background: url(https://dailypost.files.wordpress.com/2013/08/img_8488.jpg)no-repeat center center scroll;
+background-size: cover;
+}
+.carousel-inner>.active{
+	width: 100%;
+	height: 100%;
+}

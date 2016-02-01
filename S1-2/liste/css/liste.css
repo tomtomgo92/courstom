@@ -1,0 +1,33 @@
+body{
+		font: 16px sans-serif;
+}
+a{
+		text-decoration: none;
+		color: rgba(0,0,0,0.8);
+}
+h1,h2,h3{
+		padding: 0 5px 0 5px 0;
+		font-weight: 100;
+		color: #3A89B0;
+		font-size: x-large;
+}
+.rows{
+		width: 550px;
+		margin: 0 auto;
+}
+ul li{
+		background: url(../img/1437138490_twitter.png) no-repeat 0 0 scroll;
+}
+h1:before{
+		content: url(../img/1437138460_code_brackets.png);
+		vertical-align: -20px;
+		margin-right: 5px;
+		opacity: 1;
+}
+ul,li{
+		padding-left: 0;
+		list-style: none;
+}
+li a{
+		padding-left: 23px;
+}

@@ -1,0 +1,11 @@
+body{
+font:16px sans-serif;/*propriété et valeur css pour la police*/
+margin:0;/*marges de body à 0*/
+}
+	h1,p{
+		outline: dotted 1px red;/*met les baliuses de type block en rouge*/
+	}
+strong,em,cite,mark,ins,sup,sub,abbr,acronym,samp{
+	background-color: red;
+	color: #fff;
+}

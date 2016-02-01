@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" scr="js/modernizr.custom.78869.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/mozno.css">
+	<link rel="stylesheet" type="text/css" href="css/moz.css">
+
+<!--[if IE]>
+    <script type="text/javascript" src="js/modernizr.custom.78869.js">
+    </script>
+<![endif]-->
+</head>
+<body>
+	<script type="text/javascript">
+	(function(){
+	var titre="<h1>"+navigator.appCodeName+"</h1>";
+	//var nom="Heich";
+	//var prenom="Brandan";
+	//var ville="los angeles";
+	
+	//var outPrint="<ul><li>Nom : "+nom+"</li><li> Prénom : "+prenom+" </li><li> Ville : "+ville+"<li> Date : "+date+" </li></ul>"*/
+	var myDate="1995";
+	var tabUser=new Array("Heich","Brandan","Los angeles",myDate);
+	//alert(tabUser[0]+"\n"+tabUser[1]+"\n"+tabUser[2]+"\n"+tabUser[3]);
+	//document.write(titre+"<ul><li>"+tabUser[0]+"</li><li>"+tabUser[1]+"</li><li>"+tabUser[2]+"<li>"+tabUser[3]+"</li></li></ul>");
+
+	var otherUser=new Array("Thomas","Mill","Paris",myDate);
+
+		document.write("<ul>");
+	for(i=0; i<4; i++)	{
+		document.write("<li>"+tabUser[i]+"</li>");
+						}
+	for(i in otherUser){		
+		document.write("<li>"+otherUser[i]+"</li>");
+	}
+	document.write("</ul>");
+
+})()
+	</script>
+</body>
+</html>

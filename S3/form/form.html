@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="FR-fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/002mo.css">
+		<link rel="stylesheet" type="text/css" href="css/form.css">
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.3.0/css/font-awesome.css">
+	<!--[if IE]>
+    <script type="text/javascript" src="js/modernizr.custom.78869.js">
+    </script>
+<![endif]-->
+</head>
+<body>
+<h1><i class="fa fa-info-circle"></i> Mon Form</h1>
+<div class="form-action">
+<h2>My account</h2>
+<form action="" method="get">
+<p class="warning"></p>
+<input type="text" name="mail" id="mail" placeholder="Adresse mail" id="mail">
+<input type="password" name="pwd" id="pwd" placeholder="Mot de passe">
+<input type="checkbox" id="condition" value="yes" name="condition"> <label> Accepter les conditions</label>
+<input type="button" value="Envoyer" id="btn" >
+</form>
+</div>
+
+<script type="text/javascript">
+var btn=document.getElementById("btn");
+
+	function validForm(){
+		var warning=document.querySelector(".warning");
+		var valid=document.querySelector(".valid");
+		var mail=document.getElementById("mail").value;
+		var pwd=document.getElementById("pwd").value;
+if(/^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,5}$/.test(mail)) {
+	warning.innerHTML="adresse email valide";
+	warning.style.display="block";
+	warning.style.background="#d50000";
+	warning.style.color="#fff";
+}
+else{
+	alert("email pas bon");
+	warning.innerHTML="adresse email valide";
+	warning.style.display="block";
+}
+	//alert(mail);
+	if(!mail || !/^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,5}$/.test(mail)|| !pwd){
+		warning.style.display="block";
+		warning.style.background="#d50000";
+		warning.innerHTML="Veuillez remplir le champ";
+		setTimeout(function(){
+   window.location.reload(1);
+}, 1000);
+	}
+	else if(mail.length>20){
+		warning.style.display="block";
+		warning.style.background="#d50000";
+		warning.innerHTML="humm, il semblerait que votre e-mail est trop long !";
+		setTimeout(function(){
+   window.location.reload(1);
+}, 1000);
+	}
+	else{
+		warning.style.display="block";
+		warning.style.background="#00c853";
+		warning.innerHTML="Votre e-mail est bien " +mail+ " ? <br>Votre mot de passe est correct " +pwd+ " ?";
+		
+		setTimeout(function(){
+   window.location.href="https://www.google.fr";
+}, 1000);
+	
+	}
+}
+btn.addEventListener("click",validForm,false);
+</script>
+</body>
+</html>

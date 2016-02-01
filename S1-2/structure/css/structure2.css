@@ -1,0 +1,44 @@
+body{
+	font: 100% sans-serif;
+	font-family: 'Lobster two', cursive;
+}
+dl{
+	width: 255px;
+	margin:auto;
+	padding: 10px;
+	box-sizing:border-box;
+-webkit-box-sizing: border-box;
+-ms-box-sizing: border-box;
+}
+dd,ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+dl img{
+	display: block;
+	width: 100%;
+}
+dt,.affiche{
+	padding: 5px;
+	background-color:#50D485;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	font-size: 110%; 
+}
+.affiche{
+	background-color:#006D4E; 
+}
+
+
+ul li ul.image{
+	display:none;
+	transition-duration: 0.9s;
+	-moz-transition-duration: 0.9s;
+}
+a{
+	display: block;
+	text-decoration: none;
+	color: #fff;
+}

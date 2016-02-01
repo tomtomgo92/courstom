@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/002mo.css">
+		<link rel="stylesheet" type="text/css" href="css/radio.css">
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.3.0/css/font-awesome.css">
+	<!--[if IE]>
+    <script type="text/javascript" src="js/modernizr.custom.78869.js">
+    </script>
+<![endif]-->
+</head>
+<body>
+	<h1>Quel nav. ?</h1>
+	<div id="affiche">
+<form name="f" action="">
+	<select name="list" id="menu" onchange="liste(f)">
+		<option value="0">Faites un choix</option>
+		<option value="2">IE</option>
+		<option value="3">Firefox</option>
+		<option value="4">autre</option>
+	</select>
+<input type="button" value="Réponse" id="btn" onclick="liste(f)">
+</form>
+
+<script type="text/javascript">
+	function liste(f){
+		if (!f.list.selectedIndex) {
+			alert("faite un choix\n"+typeof(f));
+		}
+		else{
+	alert("Le nav. "+(f.list.selectedIndex));	
+		}
+	}
+
+</script>
+</div>
+</body>
+</html>

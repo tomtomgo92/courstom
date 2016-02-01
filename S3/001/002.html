@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="Fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<link rel="stylesheet" type="text/css" href="js/modernizr.custom.78869.js">
+	<link rel="stylesheet" type="text/css" href="css/001mo.css">
+	<link rel="stylesheet" type="text/css" href="css/001.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome-4.3.0/css/font-awesome.css">
+	<!--[if IE]>
+    <script type="text/javascript" src="js/modernizr.custom.78869.js">
+    </script>
+<![endif]-->
+</head>
+<body>
+	<h1>JavaScript</h1>
+	<script type="text/javascript">
+(function(){
+var titre="PHP";
+var myTitle=document.querySelector('h1');
+if(titre!=document.title && myTitle){
+	//alert("Vosu etes ici \n"+document.compatMode)
+	myTitle.innerHTML=titre;
+	document.querySelector('title').text=titre;
+}
+else
+{
+	alert("Changez de metier !!!!")
+}
+
+})()
+
+</script>
+</body>
+</html>

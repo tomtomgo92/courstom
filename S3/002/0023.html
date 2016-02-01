@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/002mo.css">
+		<link rel="stylesheet" type="text/css" href="css/002.css">
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.3.0/css/font-awesome.css">
+	<!--[if IE]>
+    <script type="text/javascript" src="js/modernizr.custom.78869.js">
+    </script>
+<![endif]-->
+</head>
+<body>
+<p class="response">
+	Il etait une fois !
+</p>
+<button class="btn">Je suis un bouton</button>
+<script type="text/javascript">
+	(function(){
+		var msgBtn=document.querySelector(".btn");
+		var msg=document.querySelector("p");
+		msg.innerHTML='Et je suis plein de pus MouHahaa <button id="closed">&times;</button>';
+		var btnCross=document.querySelector("#closed");
+		function printIn(){
+			msg.style.display="block";
+		}
+		function printOut(){
+			msg.style.display="none";
+		}
+		msgBtn.addEventListener("click",printIn);
+		msg.addEventListener("click",printOut);
+
+	})()
+</script>
+</body>
+</html>

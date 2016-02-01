@@ -1,0 +1,32 @@
+@media screen and (max-width: 1024px){
+
+body{
+	background: #F0F0F0;
+
+}
+h1,h2{
+	width: auto;
+	margin:1px;
+	font-size: 5vw;
+	text-align: center;
+	margin: 10px;
+	padding: 0;
+}
+p{
+	font-size: 3vw;
+	text-align: justify;
+    padding: 0.25rem;
+    margin: 0.63rem;
+
+}
+img{
+	width: auto;
+    padding: 0;
+    margin: 0.63rem;
+}
+p>img{
+	padding: 0;
+	margin: 0;
+}
+
+}

@@ -1,0 +1,111 @@
+﻿html{
+	background:url(image/bg-flat.png)no-repeat center center fixed;
+	background-size:cover;
+}
+html,body{
+	font:16px/30px sans-serif;
+	
+	
+	
+}
+#content{
+	width:1024px;
+	margin:0 auto;
+	border:solid 1px #ccc;
+	padding:10px;
+	box-shadow:0px 0px 3px #ccc;
+	font-family:sans-serif;
+	background: rgba(255,255,255,0.8);
+	font-family: 'Comfortaa';
+
+
+
+}
+.titreCV{
+	font-size:30px;
+	color:#3B5998;
+	text-align:center;
+	background: inherit;
+
+}
+.titreSection{
+	font-weight:lighter;
+	color:#555;
+	margin: 10px 0 10px 0;
+	padding:3px;
+	border-radius:4px;
+	line-height: 2.8125rem;
+	font-size: 1.2rem;
+	background: #b71c1c;
+}
+.espace{
+	margin-bottom:0;
+}
+.dateCV{
+	float:left;
+	margin-right:15px;
+	}
+h1{
+	font-size:1.35em;
+	margin:10px;
+	font-weight: 300;
+
+}
+.titreBleu{
+	color:#3B5998;
+	text-decoration:none;
+}
+#affiche,#tableau{
+	display:none;
+ 
+}
+
+#content table{
+	width:100%;
+	margin-top:10px;
+	border:1px solid #000;
+	border-collapse:collapse;
+	
+	
+}
+#content th,td{
+	border:1px solid #222;
+	border-collapse:collapse;
+	padding:5px;
+}
+#content th{
+	background-color:#b71c1c;
+	color:#FFF;
+}
+table{
+	width: 100%;
+}
+table caption{
+	font-weight:lighter;
+	margin-bottom:5px;
+}
+#content table .code{
+	color:#666;
+	
+	
+}
+th{
+	font-weight: 300;
+}
+td:first-child{
+	width:30%;
+}
+table tr{
+	transition-duration:0.5s;
+
+}
+#content table tr:hover,tr:focus{
+	background-color:#CCC;
+	cursor:pointer;
+}
+a{
+	outline:none;
+}
+#contenu{
+	display: none;
+}

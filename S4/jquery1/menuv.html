@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="Fr-fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/001mo.css">
+		<link rel="stylesheet" type="text/css" href="css/.css">
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.3.0/css/font-awesome.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!--[if IE]>
+    <script type="text/javascript" src="js/modernizr.custom.78869.js">
+    </script>
+<![endif]-->
+</head>
+<body>
+	<style scoped>
+		body{
+			font:16px sans-serif;
+			font-size-adjust:0.5;
+			margin:0;
+			background: #EEE;
+		}
+		a{
+			text-decoration: none;
+			color:inherit;
+		}
+		ul{
+			padding:0;
+			margin:20px auto 0;
+			width: 350px;
+			line-height: 50px;
+			background: #000;
+		}
+		li{
+			width:auto;
+			list-style: none;
+			transition-duration:0.5s;
+			background: linear-gradient(bottom,#212121,#616161);
+			background: -moz-linear-gradient(bottom,#212121,#616161);
+			margin-bottom: 1px;
+			
+		}
+		li>a{
+			display: block;
+			color:#fff;
+			text-align: left;
+			transition-duration:0.9s;
+			padding-left:5px;
+		}
+		li:hover,a:hover{
+			background: rgba(0,0,0,0.3);
+			color:rgba(0,255,0,0.8);
+		}
+		.css{
+			color: #000;
+			background: -moz-linear-gradient(top, #b7deed 0%, #21b4e2 35%, #71ceef 50%, #b7deed 100%);
+		}
+		.item-a,.item-b,.item-c{
+		display: none;
+		}
+		ul>li>ul{
+			margin:0;
+			width: auto;
+		}
+		ul>li>ul>li{
+			padding:0;
+			padding-left:5px;
+		}
+	</style>
+	<ul>
+		<li class="conf"><a href="#"><i class="fa fa-cog"></i> Config</a>
+			<ul class="item-a" id="css">
+				<li class="css">Configuration <i class="fa fa-angle-right"></i></li>
+				<li class="css">Principe de base <i class="fa fa-angle-right"></i></li>
+
+			</ul>
+		</li>
+
+		<li class="cours"><a href="#"><i class="fa fa-pencil"></i> Cours</a>
+			<ul class="item-b">
+				<li class="css">Html <i class="fa fa-angle-right"></i></li>
+				<li class="css">CSS <i class="fa fa-angle-right"></i></li>
+			</ul>
+		</li>
+		<li class="cont"><a href="#"><i class="fa fa-envelope-o fa-fw"></i> Contact</a>
+			<ul class="item-c">
+				<li class="css">Ici y'a un texte <i class="fa fa-angle-right"></i></li>
+			</ul>
+		</li>
+
+	</ul>
+
+	<script type="text/javascript">
+
+$(function(){
+$(".conf").click(function(e){
+	//alert("ok");
+    $(".item-a").slideToggle(400);
+
+    e.stopPropagation();
+    });
+$(".cours").click(function(e){
+    $(".item-b").slideToggle(400);
+    e.stopPropagation();
+    });
+$(".cont").click(function(e){
+    $(".item-c").slideToggle(400);
+    e.stopPropagation();
+    });
+$('html').click(function(e){
+    $(".item-a,.item-b,.item-c").slideUp(400);
+    e.stopPropagation();
+    });
+}); 
+
+	</script>
+</body>
+</html>

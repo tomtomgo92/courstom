@@ -1,0 +1,73 @@
+body{
+	font: 16px;
+}
+.conteneur{
+	width: 400px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 5px 0 0 5px;
+}
+.box{
+	width: 195px;
+	height: 195px;
+	border: solid 1px #999;
+	text-align: center;
+	line-height: 198px;
+	background: #ccc;
+	float: left;
+	box-sizing: border-box;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+.box:hover{
+	opacity: 0.5;
+	cursor: pointer;
+}
+.box-primary{
+	background: #1DC7E5;
+}
+.container-secondary>.box-inline{
+	background:url(../img/dr-house-regard-sadique-big.jpg)no-repeat center center scroll;
+	background-size: cover;
+}
+.box-primary,.container-secondary>.box-primary{
+	background: #1DC7E5;
+}
+.box-warning,.container-secondary>.box-warning{
+	background: #DD0606;
+}
+.box-even,.container-secondary>.box-even{
+	background: #23D370;
+}
+.container-secondary>.box-inline>.bg-image{
+	display: block;
+	width: auto;
+	border-radius: 50%;
+	background: #1DC7E5;
+	opacity: 1;
+	-webkit-trasition-duration: 1.5s;
+	-o-transition-duration: 1.5s;
+	transition-duration: 1.5s;
+}
+.container-secondary>.box-inline>.bg-image:hover{
+	opacity: 0.1;
+}
+.clear{
+	clear: left;
+}
+.box-inline{
+	width: 197px;
+	height: 197px;
+	text-align: center;
+	line-height: 200px;
+	background: #ccc;
+	display: inline-block;
+	border-radius: 50%;
+}
+.container-secondary{
+	width: 600px;
+	margin: 0 auto;
+}
+a{
+	text-decoration: none;
+	color: #222;

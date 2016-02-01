@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/normaliz.css">
+		<link rel="stylesheet" type="text/css" href="css/bank.css">
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.3.0/css/font-awesome.css">
+	<!--[if IE]>
+    <script type="text/javascript" src="js/modernizr.custom.78869.js">
+    </script>
+<![endif]-->
+</head>
+<body>
+	<script type="text/javascript">
+(function(){
+
+	
+	var money=window.prompt("Montant de votre retrait ?");
+
+
+if(money<20){
+	
+	alert("Refusé");
+	document.location.reload(); 
+}
+else{
+	alert("Prenez vos billets");	
+	
+}
+if(confirm("Veuillez confirmer le retrait")){
+	alert('merci de votre visite');
+}
+else{
+	alert('veuillez faire votre choix');
+	document.location.reload();
+}
+
+})();
+
+	</script>
+	
+</body>
+</html>

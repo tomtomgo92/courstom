@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/001mo.css">
+		<link rel="stylesheet" type="text/css" href="tableemmet.css">
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.3.0/css/font-awesome.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!--[if IE]>
+    <script type="text/javascript" src="js/modernizr.custom.78869.js">
+    </script>
+<![endif]-->
+</head>
+<body>
+
+
+<table>
+	<caption class="inner-title">Données Tabulaires</caption>
+
+	<tr>
+		<td>item 1</td>
+		<td>item 2</td>
+		<td>item 3</td>
+		<td>item 4</td>
+		<td>item 5</td>
+	</tr>
+	<tr>
+		<td>item 1</td>
+		<td>item 2</td>
+		<td>item 3</td>
+		<td>item 4</td>
+		<td>item 5</td>
+	</tr>
+	<tr>
+		<td>item 1</td>
+		<td>item 2</td>
+		<td>item 3</td>
+		<td>item 4</td>
+		<td>item 5</td>
+	</tr>
+	<tr>
+		<td>item 1</td>
+		<td>item 2</td>
+		<td>item 3</td>
+		<td>item 4</td>
+		<td>item 5</td>
+	</tr>
+	<tr>
+		<td>item 1</td>
+		<td>item 2</td>
+		<td>item 3</td>
+		<td>item 4</td>
+		<td>item 5</td>
+	</tr>
+	</table>
+<!-- details>summary{Information}+p{If your browser supports this element, it should allow you to expand and collapse these details}+hr(section(p{La méthode wrap enroule le contenu d'un élément contenu dans un autre éléement. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam voluptas ipsa deleniti explicabo sequi aspernatur vitae. Nemo tempore doloremque atque quia assumenda ipsam. Perspiciatis autem quia laboriosam quis possimus quam.})) -->
+<details>
+<summary>Information</summary>
+<p>If your browser supports this element, it should allow you to expand and collapse these details</p>
+<hr>
+<section>
+<p>La méthode wrap enroule le contenu d'un élément contenu dans un autre éléement. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam voluptas ipsa deleniti explicabo sequi aspernatur vitae. Nemo tempore doloremque atque quia assumenda ipsam. Perspiciatis autem quia laboriosam quis possimus quam.</p>
+</section>
+</hr>
+</details>
+
+
+			<script type="text/javascript">
+	$(function(){
+	//alert('ok');
+	$('<span> &nbsp;&amp; jQuery </span>').appendTo('.inner-title');
+	//insère une élément à la fin de la cible voir prependTo()
+	$('<p>Insertion dynamique du paragraphe Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente porro voluptatem rerum modi quibusdam accusantium nihil facere cupiditate quam! Ipsa unde repellendus officiis quo, cum obcaecati saepe! Pariatur, laudantium consequatur! </p>').insertBefore('table');
+	//insère un élément avant la cible voir insertAfter()
+	$('section>p').wrapInner('<i></i>');
+	//wrapInner enroule avec la balise <i> le contenu du <p>
+	$('section>p>i').wrap('<strong></strong>');
+	//Ici, le wrap enroule le contenu de la balise <i>
+	//$('caption').remove(':contains("tabulaires")');
+	//$
+
+
+	});
+			</script>
+</body>
+</html>

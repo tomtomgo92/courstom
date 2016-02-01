@@ -1,0 +1,69 @@
+body{
+	font: 16px sans-serif;
+}
+h1{
+	text-align: center;
+}
+.container{
+	width: 400px;
+	margin: 0 auto;
+
+}
+a{
+	text-decoration: none;
+	color: #222;
+}
+.btn {
+	line-height: 40px;
+	background:transparent;
+	border: solid 1px #ccc;
+	display: block;
+	width: 120px;
+	text-align: center;
+	padding:5px;
+
+}
+.btn-default{
+	background: #ccc;
+	color: #fff;
+}
+.btn-primary{
+	background: #01579b;
+	color: #fff;
+	width: 130px;
+}
+.btn-warning{
+	background: #d50000;
+	width: 150px;
+}
+.btn-success{
+	background: #1b5e20;
+	color: #fff;
+	width: 200px;
+
+}
+.btn-event{
+		background: #ffeb3b;
+		color: #fff;
+}
+
+.btn-button-form{
+background: linear-gradient(bottom, #236303, #43b60a);
+background: -moz-linear-gradient(bottom, #236303,#43b60a);
+background: -webkit-linear-gradient(bottom, #236303,#43b60a);
+text-shadow:1px 1px 1px #;
+font-size:1rem;
+width:150px;
+}
+.btn-button-form:before{
+	content: url(../img/1437486568_circle_next_arrow_disclosure.png);
+	vertical-align: -4px;
+	margin-right: 3px;
+	opacity: 0.3;
+	line-height: 30px;
+}
+.btn-button-form:hover{
+	background: linear-gradient(top, #236303 #43bb60);
+	background: -moz-linear-gradient(top, #236303 #43bb60);
+	background: -webkit-linear-gradient(top, #236303 #43bb60);
+}

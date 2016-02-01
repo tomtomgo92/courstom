@@ -1,0 +1,29 @@
+body{
+	font: 16px sans-serif;
+	font-size-adjust:0.5;
+	margin: 0;
+}
+ul{
+	padding: 0;
+	margin: 0;
+	width: auto;
+	line-height: 65px;
+	background: #222;
+}
+li{
+	width: 120px;
+	display: inline-block;
+}
+a{
+	text-decoration: none;
+	display: inherit;
+	text-align: center;
+}
+li>a{
+	display: block;
+	color: #FFF;
+}
+li:hover,a:hover{
+	background: rgba(0,0,0,0.3);
+	color: rgba(255,0,0,0.8);
+}

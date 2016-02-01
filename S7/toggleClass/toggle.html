@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="FR-fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="normalize.css">
+		<link rel="stylesheet" type="text/css" href="toggle.css">
+		<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!--[if IE]>
+    <script type="text/javascript" src="js/modernizr.custom.78869.js">
+    </script>
+<![endif]-->
+</head>
+<body>
+<div class="cont">
+	<button> <i class="fa fa-cog"></i> Toggle class "main" pour l'element p</button>
+		<p>Ceci est un paragraphe</p>
+		<p>Ceci est un autre paragraphe</p>
+		<p><strong>Note :</strong> Clique</p>
+	
+</div>
+<hr>
+<div class="cont">
+<dl>
+	<dt><h2><i class="fa fa-angle-right"></i> Connaissance des languages</h2></dt>
+		<dd>
+			<ul class="hidd">
+				<li><i class="fa fa-star"> HTML<sub>5</sub></i></li>
+				<li><i class="fa fa-star"> CSS<sup>3</sup></i></li>
+				<li><i class="fa fa-star-o"> JS native</i></li>
+				<li><i class="fa fa-star-o"> JQuery</i></li>
+			</ul>
+		</dd>
+	
+</dl>
+</div>
+
+	<script type="text/javascript">
+		$('title').html('toogleClass');
+		$(function(){
+			$('button').on('click',function(e){
+				$('p').toggleClass('main');
+				e.stopPropagation();
+			});
+
+$('dt>h2').on('click',function(e){
+
+			$('h2>i').toggleClass('fa-angle-down');
+			$('ul').fadeToggle(200);
+			e.stopPropagation();
+			});
+
+		});
+
+
+	</script>
+</body>
+</html>

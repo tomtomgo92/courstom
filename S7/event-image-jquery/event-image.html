@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Evemenement image</title>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<style scoped>
+		body{
+			font: 16px 'Roboto',sans-serif;
+			font-size-adjust:0.5;
+		}
+		h1,h2,h3{
+			font-weight: 400;
+			font-size: 1.9rem;
+		}
+		h1{
+			text-align: center;
+		}
+		img{
+			display: inline-block;
+			max-width: 100%;
+			background: #fff;
+			padding:10px;
+			box-shadow: 0 0 15px rgba(0,0,0,0.2);
+			margin-top:5px;
+			border:solid 1px #ccc;
+		}
+		.row{
+			width: 800px;
+			margin:0 auto;
+			text-align: center;
+		}
+	</style>
+	<h1>&lt;/&gt; Evénement image</h1>
+	<div class="row">
+	<button>Clique</button>
+	Cliquez sur l'image
+
+		<img src="images/00.jpg">
+
+		<div id='message'></div>
+
+
+		<script type="text/javascript">
+
+		  // $(function() {
+		  // 	$('img').one('click', function(){
+		  // 		$('#message').text('Vous avez cliqué').fadeIn(1000).fadeOut(5000);
+		  // 	});
+		  //   $('button').click(function(){
+		  //   	$('img').trigger('click')
+		  //   });
+
+		  // });
+		  // $(function(){
+
+$('img').click(function(event,texte){
+
+if ( texte == undefined )
+
+texte = "par vous";
+
+$('#message').text('L\'image a été cliquée ' + texte).fadeIn(1000).fadeOut(2000);
+});
+
+$('button').click(function(){
+$('img').trigger('click', 'par jQuery');
+
+});
+
+});
+
+
+		</script>
+	</div>
+</body>
+</html>

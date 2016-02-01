@@ -1,0 +1,38 @@
+body{
+	font: 16px/30px 'Raleway',sans-serif;
+	background: #f5f5f5;
+	margin: 0;
+}
+h1{
+	margin: 0 0 20px 0;
+	line-height: 60px;
+	text-align: center;
+	font-weight: 300;
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+	color: #fff;
+}
+p:first-line{
+	font-size: x-large;
+}
+.main-div, .vertical-center{
+	border-radius: 5px;
+}
+.main-div{
+	background: url(http://www.ixdaily.com/storage/styles/large/public/article/3334004-878a5030.jpg?itok=pqhsCyph) 0 0 no-repeat scroll;
+	font-size: 18px;
+	height: 450px;
+	max-width: 850px;
+	padding: 15px;
+	margin: 0 auto;
+}
+.vertical-center{
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);
+	color: #ffffff;
+	padding: 15px;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}

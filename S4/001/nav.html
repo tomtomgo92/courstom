@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Navigateur</title>
+		<link rel="stylesheet" type="text/css" href="css/normaliz.css">
+		<link rel="stylesheet" type="text/css" href="css/002.css">
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.3.0/css/font-awesome.css">
+		<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!--[if IE]>
+    <script type="text/javascript" src="js/modernizr.custom.78869.js">
+    </script>
+<![endif]-->
+</head>
+<body>
+<h1></h1>
+<div>
+	<h2>Titre</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae porro pariatur debitis, consequatur optio sapiente sint autem perspiciatis quod! Amet dolorem officia qui, ut vel exercitationem consequatur nulla, alias necessitatibus.</p>
+	<h2>Titre</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae porro pariatur debitis, consequatur optio sapiente sint autem perspiciatis quod! Amet dolorem officia qui, ut vel exercitationem consequatur nulla, alias necessitatibus.</p>
+	<h2>Titre</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae porro pariatur debitis, consequatur optio sapiente sint autem perspiciatis quod! Amet dolorem officia qui, ut vel exercitationem consequatur nulla, alias necessitatibus.</p>
+
+</div>
+<script type="text/javascript">
+	$(function(){
+$('h1, title').text("Mon navigateur est " +navigator.appCodeName);
+alert(navigator.appCodeName);
+
+$('h2').click(function(e){
+	$(this).css('visibility','hidden');
+	event.stopPropagation;
+	});
+
+	});
+
+</script>
+</body>
+</html>

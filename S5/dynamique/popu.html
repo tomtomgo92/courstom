@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/001mo.css">
+		<link rel="stylesheet" type="text/css" href="popu.css">
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.3.0/css/font-awesome.css">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!--[if IE]>
+    <script type="text/javascript" src="js/modernizr.custom.78869.js">
+    </script>
+<![endif]-->
+</head>
+<body>
+	<h1> <div class="info">Info</div> Variation sur les Tooltype</h1>
+<div class="cont">
+<div class="hidd">
+<h2><i class="fa fa-commenting"></i> Plus d'information</h2>
+<p class="arrow_box">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+</p>
+</div>
+<button>Read more</button>
+
+
+</div>
+
+
+<script type="text/javascript">
+	
+	$('button').click(function (e){
+	$('.hidd').fadeToggle(400);
+	e.stopPropagation();
+});
+	$('html').click(function (e){
+		$('.hidd').fadeOut(400);
+		e.stopPropagation();
+});
+		
+$('.hidd').click(function (e){
+	e.stopPropagation();
+});
+
+</script>
+
+
+
+</body>
+</html>

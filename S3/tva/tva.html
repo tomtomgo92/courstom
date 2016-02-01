@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/001mo.css">
+		<link rel="stylesheet" type="text/css" href="css/002.css">
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.3.0/css/font-awesome.css">
+	<!--[if IE]>
+    <script type="text/javascript" src="js/modernizr.custom.78869.js">
+    </script>
+<![endif]-->
+</head>
+<body>
+<h1>Mon prix</h1>
+<p id="prix"></p>
+<p id="ht"></p>
+<p id="pomme"></p>
+
+<script type="text/javascript">
+var tva=19.6;
+var ht=19.5;
+var ttc= (ht*tva/100);
+	alert("Le prix TTC est "+(ttc+ht));
+
+var toto=document.getElementById("prix");
+var tata=document.getElementById("ht");
+var tutu=document.getElementById("pomme");
+
+toto.innerHTML=(tva);
+tata.innerHTML=("Le prix Ht est "+ht+"€ & la deduction est de " +ttc+ " €");
+tutu.innerHTML=(ttc+ht);
+
+</script>
+
+</body>
+</html>

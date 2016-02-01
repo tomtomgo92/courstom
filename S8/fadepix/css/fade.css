@@ -1,0 +1,14 @@
+.cont{
+	position: relative;
+	width: 400px;
+	margin: 0 auto;
+}
+img{
+	display: block;
+	position: absolute;
+	left: 60px;
+}
+#imageBig{
+	display: none;
+
+}

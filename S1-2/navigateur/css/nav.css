@@ -1,0 +1,11 @@
+body{
+
+}
+table{
+	border: 1px #222;
+	width: 800px;
+	margin: 0 auto;
+}
+tr:nth-child(2n){
+	background: #C7DDED;
+}

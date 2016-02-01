@@ -1,0 +1,103 @@
+body{
+			font:16px sans-serif;
+			margin:0;
+			font-family: 'Oxygen', sans-serif;
+			background:#f5f5f5;
+		}
+		h2{
+			color:#262626!important;
+			margin-top:15px!important;
+		}
+		.rows p:first-line{
+			font-size:1.500rem;
+			font-weight:100;
+			color:#1E82CC;
+		}
+		p{
+			border-bottom:solid 1px #ccc;
+			margin:0;
+			padding:1.25rem 0 1.25rem  0;
+			line-height:1.45rem;
+		}
+		p:before{
+			content:url(images/twitter.png);
+		}
+		a{
+			text-decoration:none;
+			color:rgba(0,0,0,0.8);
+		}
+		header{
+			position:absolute;
+			line-height:30px;
+			width:100%;
+			top:0;
+			left:0;
+			background:#009688;
+			box-shadow:0 2px 2px #999;
+			
+			}
+		h1,h2,h3{
+			padding: 0 5px 0 5px 0;
+			font-weight:100;
+			color:#fff;
+			font-size:x-large;
+			text-shadow:1px 1px 1px #999;
+			margin:0;
+		}
+		h1:before{
+			content:url(images/competence_integration.png);
+			vertical-align:-1.25rem;
+			margin-right:5px;
+			opacity:0.6;
+		}
+		.rows{
+			width:43.75rem;
+			margin:5rem auto 0;
+		}
+		
+		ul{
+			margin:10px 0;
+		}
+		ul,li{
+			
+			padding:0;
+			list-style: none;
+
+		}
+		li>a{
+			display: block;
+			width:auto;
+			color:#fff;
+		}
+		ul>li{
+			text-align: left;
+			background: #009688;
+			padding:8px 4px;
+			margin-bottom:1px;
+			width:170px;
+			border-radius:2px;
+			transition-duration:0.5s;
+		}
+		ul>li:hover{
+			opacity:0.8;
+		}
+			.ch{
+			padding:3px;
+			transition-duration:0.5s;
+			border-radius:2px;
+		}
+		.ch:target{
+			background: #ccc;
+			
+		}
+		.fa{
+			margin-right: 10px;
+			opacity:0.8;
+			vertical-align: middle;
+		}
+		h1>.fa-bars{
+				font-size:1.850rem;
+				cursor:pointer;
+				vertical-align: middle;
+				display: none;
+			}

@@ -1,0 +1,84 @@
+.button {
+    display: inline-block;
+    padding: 1em;
+    background-color: #79BD9A;
+    text-decoration: none;
+    color: white;
+}
+.hvr-float {
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+}
+.hvr-float:hover,
+.hvr-float:focus,
+.hvr-float:active {
+  transform: translateY(-8px);
+}
+.hvr-icon-forward:before {
+    content: "\f138";
+    position: absolute;
+    right: 1em;
+    padding: 0 1px;
+    font-family: FontAwesome;
+    transform: translateZ(0);
+    transition-duration: 0.1s;
+    transition-property: transform;
+    transition-timing-function: ease-out;
+}
+.hvr-icon-forward:before {
+    content: "\f001";
+}
+.box h3{
+	text-align: center;
+	position: relative;
+	top: 80px;
+}
+
+.box h3{
+ text-align: center;
+ position: relative;
+ top:80px;
+}
+.box {
+ width: 70%;
+ height: 200px;
+ background: #fff;
+ margin: 40px auto;
+ border:solid 1px #ccc;
+}
+/* EFFECT2 */
+.effect2{
+ position: relative;
+}
+.effect2:before, .effect2:after{
+ z-index: -1;
+ position: absolute;
+ content: "";
+ bottom: 15px;
+ left: 10px;
+ width: 50%;
+ top: 80%;
+ max-width: 300px;
+ background: #700;
+ -webkit-box-shadow: 0 15px 10px #777;
+ box-shadow: 0 15px 10px #777;
+ -webkit-transform: rotate(-3deg);
+ -ms-transform: rotate(-3deg);
+ -o-transform: rotate(-3deg);
+ transform: rotate(-3deg);
+}
+.effect2:after{
+ -webkit-transform: rotate(3deg);
+ -ms-transform: rotate(3deg);
+ -o-transform: rotate(3deg);
+ transform: rotate(3deg);
+ right: 10px;
+ left: auto;
+}

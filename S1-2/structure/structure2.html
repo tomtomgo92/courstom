@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="FR-fr">
+<head>
+<link type="text/css" rel="stylesheet" media="screen" href="css/structure2.css"/>
+<link href='http://fonts.googleapis.com/css?family=Lobster+Two' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<meta charset="UTF-8">
+<meta name="description" content="futurama">
+<meta name="author" content="Thomas">
+<title>Figure</title>
+</head>
+<body>
+   <dl>
+   <dt>
+      <span class="fa fa-video-camera"></span>&nbsp; Futurama
+      </dt>
+      <dd>
+          <ul><!-- 1re liste -->
+             <li class="affiche">
+             <a href="#figure">Afficher&raquo;</a>
+                 <ul class="image" id="figure">
+                    <li>
+                        <img src="img/00.png" alt="image">
+                    </li>
+                    <li>
+                        <small><span class="fa fa-angle-right" data-glyph="chevron-right"></span> Tous les jours </small>7/7
+                    </li>
+                 </ul>
+             </li>
+           </ul>
+       </dd>
+   </dl>
+
+<script type="text/javascript">
+  $(function(){
+    $('.affiche').on('click',function(e){
+
+    if ($(".image").is(":hidden")){
+         $(".image").css("display","block").css("opacity","1");
+         $("a").html("Fermer&raquo;");
+         e.stopPropagation();
+    }
+    else{
+      $(".image").css("display","none");
+      $("a").html("Afficher&raquo;");
+      e.stopPropagation();
+    }
+    $("img").click(function(e){
+      e.stopPropagation();
+    });
+    $("html").click(function(e){
+      $("a").html("Afficher&raquo;");
+      $(".image").slideUp(1);
+      e.stopPropagation();
+    });
+
+});
+  });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+html{
+	margin: 0;
+	padding: 0;
+	background: url(2013-02-04-12-04-43-ImaSteRosenBlanc.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+body{
+	font: 16px sans-serif;
+}

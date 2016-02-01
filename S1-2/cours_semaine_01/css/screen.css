@@ -1,0 +1,54 @@
+body{
+font:16px 'Open Sans', sans-serif;/*propriété et valeur css pour la police*/
+margin:0;/*marges de body à 0*/
+}
+	p,footer{
+		width: 800px;
+		border: solid 1px #222;
+		margin: 10px auto 10px;/*0=top et bottom auto=droite et gauche*/
+}
+a{
+	text-decoration: none;
+	color:#222;
+}
+a:hover{
+	color: #64dd17;
+}
+h1{
+	text-align: center;
+	font-weight: lighter; /*evitter la graisse / bolder*/
+	color: #FAFBFD;
+	background: #3A5795;
+	border: none;
+	width: auto;
+	margin: 0 auto 10px;
+	line-height: 60px
+}
+p{
+	padding: 10px;
+	box-sizing:border-box;
+	line-height: 25px;
+	background: #fff8e1;
+	border: solid 1px #FFe082;
+	color: #222;
+}
+	p, footer{
+		margin: 10px auto;
+	}
+	footer {
+		text-align: center;
+		background: #e65100;
+		color: #fff;
+		line-height: 60px;
+		border: solid 1px #ff9800;
+}
+footer>details>a{
+	color: #fff
+}
+p+p{
+	width: 400px
+}
+p>img{
+	display: block;
+	width: 100%;
+}

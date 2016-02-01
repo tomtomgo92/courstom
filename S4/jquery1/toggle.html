@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="FR-fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/normaliz.css">
+		<link rel="stylesheet" type="text/css" href="css/002.css">
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.3.0/css/font-awesome.css">
+		<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!--[if IE]>
+    <script type="text/javascript" src="js/modernizr.custom.78869.js">
+    </script>
+<![endif]-->
+</head>
+<body>
+
+<h2></h2>
+<h1></h1>
+<h3></h3>
+
+
+	<script type="text/javascript"> 
+var myDate=new Date();
+var tab_mois=new Array('Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Aout','Septembre','Octobre','Novembre','Décembre');
+var tab_jour=new Array('Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche');
+var myTrueDate=(tab_jour[myDate.getDay()-1])+" "+myDate.getDate()+" "+(tab_mois[myDate.getMonth()])+" "+myDate.getFullYear();
+
+	$(function(){
+$('h1').text("Start JQuery");
+$('h2').text("Attention aux cookies");
+$('h3').html(myTrueDate + '<button>&times;</button>').css('display','none');
+
+$('h1,h2').hover(function(e){
+				$('h1,h2').css('cursor','pointer');
+				e.stopPropagation();
+			});
+
+$('h2').click(function(e){
+				$('h2').slideToggle(400);
+				e.stopPropagation();
+			});
+$('h1').click(function(e){
+				$('h3').fadeIn(400);
+				e.stopPropagation();
+			});
+$('button').click(function(e){
+				$('h3').fadeOut(400)
+				e.stopPropagation();
+			});
+
+	});
+	</script>
+</body>
+</html>

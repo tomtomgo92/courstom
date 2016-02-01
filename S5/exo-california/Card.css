@@ -1,0 +1,59 @@
+body{
+	font: 16px 'Oxygen';
+}
+h1{
+text-align: center;
+}
+.annonce{
+	position: absolute;
+	top: 220px;
+	left: 30%;
+	text-align: center;
+	color: #fff;
+}
+.menu{
+	
+}
+.other{
+	float: right;
+	display: block;
+	position: relative;
+	top: -60px;
+}
+.icons{
+	background: #5CACEE;
+	color: #fff;	
+}
+.primary-nav{
+	border: solid 1px;
+	width: 400px;
+}
+img{
+	width: 100%;
+	display: block;
+	
+}
+figure{
+	position: relative;
+	padding: 10px;
+}
+figure,dl,dd{
+	margin: 0 auto;
+}
+dd{
+	padding-bottom: 0px; 
+	padding-top: 0px;
+}
+dt{
+	line-height: 60px;
+	display: block;
+}
+h3{
+
+}
+h4{
+
+}
+h5{
+
+}

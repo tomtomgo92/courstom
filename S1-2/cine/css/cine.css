@@ -1,0 +1,36 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+h1{
+	font-family: 'Lobster', cursive;
+	color: #006BBF;
+	text-align: center;
+}
+ul{
+	list-style: none;
+
+}
+
+h1,h2,ul{
+width:800px;
+margin: 0 auto 10px;
+}
+
+h2{
+	margin: 0 0 0;
+	background: #FFD617;
+	line-height: 65px;
+	padding-left: 5px;
+	font-weight: 300;
+}
+.btm-default{
+	color: #006BBF;
+}
+h1:before{
+	content:url(../img/1437159821_Motion_Graphic.png);
+	vertical-align: -40px;
+	}
+	
+	div{
+		background: #fff;
+	}

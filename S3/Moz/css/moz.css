@@ -1,0 +1,7 @@
+h1{
+	text-align: center;
+}
+ul:before{
+	content: "Généralités";
+	font-weight: bolder;
+}

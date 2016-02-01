@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/normaliz.css">
+		<link rel="stylesheet" type="text/css" href="css/002.css">
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.3.0/css/font-awesome.css">
+	<!--[if IE]>
+    <script type="text/javascript" src="js/modernizr.custom.78869.js">
+    </script>
+<![endif]-->
+</head>
+<body>
+<h1>Js Age</h1>
+<p class="response"></p>
+
+<section class="image">
+	<a href="https://www.google.fr/" target="_blank"><img src="img/doodle_0.png"></a>
+</section>
+
+<script type="text/javascript">
+	(function(){
+		
+
+	var age=window.prompt("Tu as quel age mon enfant ?");
+	var image=document.querySelector('section');
+	var response=document.querySelector(".response");
+	
+if(age<18){
+	response.innerHTML="Mauvais jeune";
+	response.style.background="#FF0000";
+	image.style.display="block";
+}
+	
+
+if(age==18){
+	response.innerHTML="Bravo ca c'est joué a peu !";
+	response.style.background="#FFA100";
+	
+}
+
+	
+
+if(age>18){
+	response.innerHTML="Bravo " +age+ " ans c'est parfait";
+	response.style.background="#1C8E31";
+
+}
+	
+
+
+})();
+</script>
+	
+</body>
+</html>
