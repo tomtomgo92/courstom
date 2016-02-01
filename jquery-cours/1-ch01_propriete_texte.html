@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+<h1 id="titre">TEST</h1>
+<h2></h2>
+<h3></h3>
+
+	<script type="text/javascript">
+		$(function() {//fuction isolée JQuery
+			$('#titre,h2').text("Hello world !!!").css({'text-align':'center','font-family':'sans-serif','font-family':'sans-serif','color':'red','font-weight':'lighter'});
+			$('h2').text("Sous titre").css({'color':'blue'});
+			$('body').append('<p>Test</p>');
+			$('p').css({'color':'green'});
+			$('h3').html('coucou');
+//evenement click
+			$('h1,h2').click(function(e){
+				alert(this.tagName);
+				e.stopPropagation();
+			});
+//second evenement
+			$('h1,h2').hover(function(e){
+				$('h1,h2').css('cursor','pointer');
+				e.stopPropagation();
+			});
+//troisieme evenement
+			$('html').click(function(e){
+				$('h1,h2,h3,p').fadeToggle(400);
+				e.stopPropagation();
+			});
+
+  // Ici, le DOM est entièrement défini
+  
+
+  });
+	</script>
+</body>
+</html>
