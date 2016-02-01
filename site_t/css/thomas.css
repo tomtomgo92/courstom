@@ -1,0 +1,49 @@
+/*body{
+	background: #CFD8DC;
+	font-family: 'Lora', serif;
+}
+
+.content1{
+	background: #607D8B;
+	margin-top: 10px;
+	border-radius: 4px;
+	text-indent: 10px;
+	color: #fff;
+}
+.btn{
+	background: #009688;
+}*/
+.hero-unit>h1,.hero-unit>p{
+	text-shadow:2px 2px #222;
+	font-weight: lighter;!important;
+	color:#fff!important;
+}
+img{
+	height: 250px;
+	width: 400px;
+	border-radius: 4px;
+}
+pre{
+	height: 80px;
+}
+.hero-unit{
+	margin-top: 60px; 
+	padding: 50px 0px; 
+	padding-left: 30px; 
+	padding-right: 30px;
+	border-bottom-width: 50px;
+	background: url(http://soocurious.com/fr/wp-content/uploads/2014/06/gif-nature-decouverte-hypnotique-paysage21.gif)no-repeat center center scroll;
+	background-size: cover;
+}
+address,iframe{
+	width: 100%;
+	border-radius: 5px;
+}
+html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
