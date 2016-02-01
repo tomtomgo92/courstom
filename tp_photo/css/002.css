@@ -1,0 +1,89 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+	background: #E3E3E3;
+}
+h1{
+font-size: 20px;
+text-align: center;
+background: #6682FF;
+color: #FFFFFF;
+margin: 0 auto;
+padding: 0.400rem;
+
+
+}
+.conteneur {
+    border: 1px solid;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0.625rem;
+    padding-right: 0px;
+    width: 26.3125rem;
+    background: #fff;
+
+}
+img{
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+.bg-fil:hover{
+	opacity: 1;
+	z-index: 3;
+}
+.bg-ciga:hover{
+    opacity: 1;
+}
+.bg-yx:hover{
+    opacity: 1;
+}
+.bg-sf:hover{
+    opacity: 1;
+}
+.fa:hover{
+	opacity: 0;
+	-webkit-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+
+}
+.bg-fil, .bg-ciga, .bg-yx, .bg-sf{
+    float: left;
+    /*padding: 0.3125rem;*/
+    opacity: 0.5;
+    position: relative;
+	-webkit-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+  }
+  .bg-yx, .bg-fil{
+	/*margin-left: 10px;*/
+	margin-right: 10px;
+  }
+  .bg-fil, .bg-ciga{
+  	margin-bottom: 10px;
+  }
+  .bg-ciga, .bg-sf{
+  	margin-right: 10px;
+  }
+
+.box-large{
+	clear: left;
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+.fa-4x{
+	position: absolute;
+	top: 3.75rem;
+	left: 3.75rem;
+	color: #fff;
+	z-index: 2;
+
+}
+.vf{
+	border: solid 1.25rem;
+}

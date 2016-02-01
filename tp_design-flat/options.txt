@@ -1,0 +1,2 @@
+largeur : 351px
+pas d'hauteur

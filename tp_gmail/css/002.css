@@ -1,0 +1,108 @@
+body{
+	font: 16px 'Open Sans', sans-serif;
+	font-size-adjust: 0.5;
+}
+h1,h2{
+	color: #555555;
+	font-weight: lighter;
+	text-align: center;
+
+}
+h1{
+	font-size: 42px;
+}
+h2{
+	font-size: 18px;
+}
+.img-user{
+	width: 96px;
+	height: 96px; 
+	border-radius: 50%;
+	margin: 0 auto;
+	display: block;
+}
+.img-logo{
+	width: 116px;
+	height: 38px; 
+	margin: 0 auto;
+	display: block;
+}
+button, input{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;	
+	width: 100%;
+	height: 40px;
+	display: block;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+.box{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 15px;
+	width: 400px;
+	margin: 0 auto;
+	height: 400px;
+	background: #F7F7F7;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.conteneur{
+	margin: 0 auto;
+	margin-top: 50px;
+}
+button{
+	background: #4589F7;
+	border: 1px solid #3079ED;
+	color: #FFFFFF;
+	display: block;
+	/*margin: 0 auto;*/
+	border-radius: 4px;
+}
+a{
+    color: #427FED;
+	cursor: pointer;
+	text-decoration: none;
+}
+.banner{
+	text-align: center;
+}
+p{
+text-align: center;
+}
+.need-help{
+    float: right;
+    text-align: right;
+}
+label{
+	display: inline-block;
+	color: #427FED;
+	margin: 0;
+}
+input[type="checkbox"]{
+	display: inline-block;
+	vertical-align: -16px;
+	margin: 0 50px;
+	margin-right: 0; 
+	width: auto;
+}
+input[type="email"], input[type="password"]{
+	/*margin: 8px 50px 5px;*/
+}
+input[type="email"]:hover, input[type="password"]:hover{
+	border-color: #B9B9B9;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1)
+}
+header>.logo{
+    background-image: url("../img/Google-Logo-2.png");
+    background-size: 116px;
+    width: 116px;
+    background-repeat: no-repeat;
+    margin: 20px auto 15px;
+    height: 40px;
+    display: block;
+}
+header{
+	margin-top: 15px;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<link rel="stylesheet" type="text/css" href="css/normaliz.css">
+		<link rel="stylesheet" type="text/css" href="css/002.css">
+		<link rel="stylesheet" type="text/css" href="font-awesome-4.3.0/css/font-awesome.css">
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+	<!--[if IE]>
+    <script type="text/javascript" src="js/modernizr.custom.78869.js">
+    </script>
+<![endif]-->
+</head>
+<body>
+<div class="box">
+	<ul>
+		<li class="conf"><a href="#"><i class="fa fa-cog"></i>
+</i>    Parametre</a>
+			<ul class="item-a" id="css">
+				<li class="css">Configuration <i class="fa fa-angle-right"></i></li>
+
+			</ul>
+		</li>
+		<li class="cours"><a href="#"><i class="fa fa-weixin"></i> Message</a>
+			<ul class="item-b">
+				<li class="css">Nouveau message <i class="fa fa-angle-right"></i></li>
+			</ul>
+		</li>
+		<li class="cont"><a href="#"><i class="fa fa-user"></i> Utilisateur</a>
+			<ul class="item-c">
+				<li><img src="img/futurama350.jpg">
+				<table>
+				<tr>
+					<td><strong>250</strong> <br><span>followers</td>
+					<td><strong>63</strong> <br>Photos</td>
+					<td><strong>728</strong> <br>likes</td>
+				</tr>
+				</table>
+			</ul>
+		</li>
+		<li class="cont"><a href="#"> <h2>Futurama</h2></a>
+			<ul >
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			</ul>
+		</li>
+	</ul>
+</div>
+	<script type="text/javascript">
+
+$(function(){
+$(".conf").click(function(e){
+	//alert("ok");
+    $(".item-a").slideToggle(400);
+
+    e.stopPropagation();
+    });
+$(".cours").click(function(e){
+    $(".item-b").slideToggle(400);
+    e.stopPropagation();
+    });
+$(".cont").click(function(e){
+    $(".item-c").slideToggle(400);
+    e.stopPropagation();
+    });
+$(".cont").click(function(e){
+    $(".item-e").slideToggle(400);
+    e.stopPropagation();
+    });
+$('html').click(function(e){
+    $(".item-a,.item-b,.item-c,.item-e").slideUp(400);
+    e.stopPropagation();
+    });
+}); 
+
+	</script>
+</body>
+</html>
