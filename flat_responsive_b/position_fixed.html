@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Position fixed</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+	<style type="text/css">
+		body{
+			font:16px sans-serif;
+			margin:0;
+			font-family: 'Oxygen', sans-serif;
+			background:#f5f5f5;
+		}
+		h2{
+			color:#262626!important;
+			margin-top:15px!important;
+		}
+		.rows p:first-line{
+			font-size:1.500rem;
+			font-weight:100;
+			color:#1E82CC;
+		}
+		p{
+			border-bottom:solid 1px #ccc;
+			margin:0;
+			padding:1.25rem 0 1.25rem  0;
+			line-height:1.45rem;
+		}
+		p:before{
+			content:url(images/twitter.png);
+		}
+		a{
+			text-decoration:none;
+			color:rgba(0,0,0,0.8);
+		}
+		header{
+			position:fixed;
+			line-height:30px;
+			z-index:1;
+			width:100%;
+			top:0;
+			left:0;
+			background:#009688;
+			box-shadow:0 2px 2px #999;
+			
+			}
+		h1,h2,h3{
+			padding: 0 5px 0 5px 0;
+			font-weight:100;
+			color:#fff;
+			font-size:x-large;
+			text-shadow:1px 1px 1px #999;
+			margin:0;
+		}
+		h1:before{
+			content:url(images/competence_integration.png);
+			vertical-align:-1.25rem;
+			margin-right:5px;
+			opacity:0.6;
+		}
+		.rows{
+			width:43.75rem;
+			margin:5rem auto 0;
+		}
+		
+		ul{
+			margin:10px 0;
+		}
+		ul,li{
+			
+			padding:0;
+			list-style: none;
+
+		}
+		li>a{
+			display: block;
+			width:auto;
+			color:#fff;
+		}
+		ul>li{
+			text-align: left;
+			background: #009688;
+			padding:8px 4px;
+			margin-bottom:1px;
+			width:170px;
+			border-radius:2px;
+			transition-duration:0.5s;
+		}
+		ul>li:hover{
+			opacity:0.8;
+		}
+			.ch{
+			padding:3px;
+			transition-duration:0.5s;
+			border-radius:2px;
+		}
+		.ch:target{
+			background: #ccc;
+			
+		}
+		.fa{
+			margin-right: 10px;
+			opacity:0.8;
+			vertical-align: middle;
+		}
+		h1>.fa-bars{
+				font-size:1.850rem;
+				cursor:pointer;
+				vertical-align: middle;
+				display: none;
+			}
+
+
+		/**responsive**/
+			@media screen and (max-width: 1024px){
+
+
+h1,h2,h3{
+	font-size: 5vw;
+}
+p{
+	font-size: 14px;
+	text-align: justify;
+	padding: 0;
+}
+h1,h2,h3,p{
+	width: auto;
+	padding: 10px;
+
+}
+
+.rows{
+	width: auto;
+	margin:0 5px;
+}
+#menu>li{
+	width: auto;
+
+
+}
+header{
+	margin: 0;
+	position:static;
+}
+header>h1:before{
+	content:'';
+	display:none;
+}
+	h1>.fa-bars{
+		display: inline-block;
+	}
+
+}
+		
+	
+	</style>
+</head>
+<body>
+<header>
+	
+	<h1><i class="fa fa-bars" id="btn"></i>Flat design vs skeuomorphisme</h1>
+	
+</header>
+
+	<div class="rows">
+
+		<ul id="menu">
+
+			<li><a href="#def"><i class="fa fa-th fa-2x"></i>Style Flat</a></li>
+			<li><a href="#skeu"><i class="fa fa-apple fa-2x"></i>Skeuomorphisme</a></li>
+			<li><a href="#resp"><i class="fa fa-bars fa-2x"></i>Responsive</a></li>
+			<li><a href="#win"><i class="fa fa-windows fa-2x"></i>windows 8</a>
+		</ul>
+		<h2 id="def" class="ch">Définition du flat design</h2>
+			<p>
+			Le flat design est un style graphique associé au design de sites internet, c’est un sous-genre du courant minimaliste. Il se caractérise par des formes simples, sans textures, ni effets de volumes. Les couleurs, souvent vives sont utilisées en aplats. Certains éléments récurrents sont caractéristiques à cette tendance comme les icônes dessinées sous forme synthétique et l’utilisation de polices de caractères non standards, notamment dans les titrages, qui peuvent être de taille importante. Si le style flat fait beaucoup parler de lui en ce moment, il n’en reste pas moins que le graphisme épuré et minimaliste en web design n’est pas nouveau, dans ce cas pourquoi une telle popularité actuellement ?
+			</p>
+		<h2 id="skeu" class="ch">Skeuomorphisme d’Apple</h2>
+			<p>
+			Pendant longtemps, en terme de design informatique, Apple a fait figure de leader. Le design de ses produits, de son système d’exploitation et de ses logiciels étaient considérés par beaucoup comme des exemples à suivre. Le style Apple, on peut le résumer par des lignes épurées associées à des interfaces très intuitives et user friendly. Pour Apple, user friendly signifie représenter des interfaces rassurantes qui imitent la matérialité des objets réels. Ça donne des fonds simulant la texture du cuir, de la moquette ou du bois, des boutons qui ressemblent à des interrupteurs, des sons qui évoquent le décollage d’un avion à réaction lorsque l’on envoie des e-mails. Cette façon d’aborder le design a un nom, c’est le skeuomorphisme. 
+			</p>
+		<h2 id="resp" class="ch">Le responsive web design</h2>
+			<p>
+			Le responsive web design ou site adaptatif, qui permet d’adapter un site à la taille d’un écran, rentre de plus en plus dans les habitudes de conception web. Beaucoup de designers intègrent même cette fonctionnalité par défaut dans tout leur site, considérant, à raison, qu’il s’agit d’un devoir d’accessibilité. Les contraintes du responsive imposent des éléments graphiques permettant une certaine souplesse d’utilisation, pour pouvoir facilement les modifier selon la taille de l’écran, sans alourdir le site. Ce qui veut dire que les composants vectoriels sont préférés aux images bitmap, plus rigides. Et pour ce genre d’image, le flat design est très approprié. Le flat a l’air donc bien parti pour s’attirer les faveurs des développeurs allergiques aux images complexes, issues des esprits torturées des designers ! Un bon exemple qui montre que design et développement peuvent faire bon ménage !
+			</p>
+		<h2 id="win" class="ch">Windows 8 et le redesign de Google</h2>
+			<p>
+			En 2012, Google présenta la nouvelle interface de ses services en ligne, qui fut plutôt bien accueilli par les internautes. Puis ce fut au tour de Microsoft d’innover en lançant une toute nouvelle interface pour la version 2012 de son système d’exploitation : Windows 8. Le point commun de ces deux refontes est qu’elles posaient les bases de ce qu’on appelle aujourd’hui le flat design. Le choix des designers de ces sociétés étaient clairement centré sur le contenu, le graphisme se voulait très épuré et en retrait. Grâce à leur envergure, les deux mastodontes du web répandirent leur nouveau design sur des centaines de millions d’utilisateurs, en à peine quelques mois. Il n’a pas fallu longtemps pour que le flat devienne la nouvelle norme esthétique des sites internet. Mais comment savoir si cette tendance ne va disparaître aussi vite qu’elle est apparue ? D’abord un cours rappel sur ce qu’on appelle une tendance.
+			</p>
+
+		
+
+			
+	</div>
+	<script type="text/javascript">
+		$(function(e){
+			$('#btn').click(function(){
+				$('#menu').toggle(400);
+			});
+			
+		});
+	</script>
+</body>
+</html>
