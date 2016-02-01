@@ -1,0 +1,38 @@
+body{
+	background: #fafafa;
+	font-family: 'Lora', serif;
+}
+h1{
+	text-align: center;
+	border: solid 1px #fff;
+}
+h2{
+	text-align: center;
+}
+p{
+	margin: 15px auto;
+	text-align: center;
+	color: red;
+}
+.contener{
+	width: 200px;
+	margin: 0 auto;
+	/*margin-top: 50px;*/
+}
+input,button,textarea{
+	padding: 10px;
+	margin: 0 auto;
+	width: 200px;
+	background: #eeeeee;
+	border-radius: 5px;
+	border: solid 1px #fff;
+	color: #616161;
+}
+input[submit]{
+	background:  #90a4ae;
+	margin-left: 14px;
+	margin-top: 10px;
+	color: #fff;
+	width: 200px;
+	border: solid 2px  #607d8b;
+}
