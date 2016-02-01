@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Géolocalisation</title>
+<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+<script type="text/javascript">
+if(navigator.geolocation){
+	function succesGeo(position){
+		
+		var infopos="Position déterminé : <br />";
+		infopos+="Latitude : "+position.coords.latitude+"<br />";
+		infopos+="Longitude : "+position.coords.longitude+"<br />";
+		infopos+="Altitude : "+position.coords.altitude+"<br />";
+		document.getElementById("maposition").innerHTML=infopos;
+		//on instancie un nouvel objet LatLng pour Google Map
+		var latlng=new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+		//option pour la carte pour latlng
+		var optionsGmaps={
+			mapTypeControl:false,
+			center:latlng,
+			navigationControlOptions:{style: google.maps.NavigationControlStyle.SMALL},
+			mapTypeId:google.maps.MapTypeId.ROADMAP,
+			zoom:15
+		};
+		//Initialisation de la carte avec les options
+		var map=new google.maps.Map(document.getElementById("map"),optionsGmaps);
+		//ajout d'un marqueur à la position trouvée
+		var marker=new google.maps.Marker({
+			position: latlng,
+			map: map,
+			title:"Vous êtes ici"
+		});
+		}
+		
+	}
+	function erreurGeo(error){
+		var info="Erreur lors de la géocalisation : ";
+		switch(error.code){
+			case error.TIMEOUT:
+			 info+="Timeout !";
+			 break;
+			 case error.PERMISSSION_DENIED:
+			 info+= "vous n'avez pas donné la permission!";
+			 break;
+			 case error.POSITION_UNAVAILABLE:
+			 info+= "La position n'a pas pu être déterminé!";
+			 break;
+			 case error.UNKNOWN_ERROR:
+			 info+= "Erreur inconnue";
+			 break;
+		}
+		document.getElementById("maposition").innerHTML=info;
+	}
+	navigator.geolocation.watchPosition(succesGeo,erreurGeo,{maximumAge:120000});
+	//window.<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500' rel='stylesheet' type='text/css'>addEventListener("load",succesGeo);
+</script>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+  body{
+  	font:16px 'Roboto',sans-serif;
+  	font-size-adjust:0.5;
+  	background: #fafafa;
+  }
+  *{
+  	-webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	box-sizing: border-box;
+  }
+  #maposition{
+	width:60.1851851852%;
+	padding:3px;
+	background-color:#fff9c4;
+	border:1px solid #fff176;
+	display:block;
+	font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size: inherit;
+	margin:0 auto 38px;
+	line-height:1.45em;
+}
+
+#maposition {
+	position: relative;
+	border: 4px solid #ffeb3b;
+}
+#maposition:after, #maposition:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+#maposition:after {
+	border-color: rgba(255, 249, 196, 0);/*cela donne comme effet la couleur du bg*/
+	border-top-color: #FFF9C4;
+	border-width: 30px;
+	margin-left: -30px;
+}
+#maposition:before {
+	border-color: rgba(255, 235, 59, 0);
+	border-top-color: #ffeb3b;
+	border-width: 36px;
+	margin-left: -36px;
+}
+
+
+h1{
+	font-family:inherit;
+	color: #3A83B6;
+    margin:5px auto;
+	font-size:1.90rem;
+	text-align:center;
+	font-weight: 400;
+}
+#map{
+	margin:5px auto;
+	border:1px solid #ccc;
+	width:60.1851851852%;
+	height:480px;
+}
+@media screen and (max-width: 1080px){
+	#map,#maposition{
+		width: auto;
+		
+	}
+	h1,#maposition{
+		font-size: 5vw;
+	}
+	body{
+		margin:0;
+		padding:5px;
+	}
+
+}
+
+  </style>
+</head>
+
+<body>
+<h1>Géolocalisation</h1>
+<div id="maposition">Détection mais aucune donnée affichée...</div>
+<div id="map"></div>
+
+
+</body>
+</html>

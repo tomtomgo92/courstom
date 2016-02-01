@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lien</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,100,300,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	
+<style scoped="scoped">
+	body{
+		font:16px/20px 'Josefin Sans',sans-serif;
+		font-size-adjust:100%;
+		background: #fff3e0;
+	}
+	h1{
+		font-size:2rem;
+		text-align: center;
+		color:  #795548;
+	}
+	.container-g{
+		width:1109px;
+		margin:auto;
+	}
+	.primary-content,.secondary-content{
+		width:27.05139765554554%;
+		height: 27.05139765554554%;
+		border:solid 1px transparent;
+		margin:auto;
+		padding:20px;
+		box-sizing:border-box;
+		border-radius:50%;
+		background: #fff176;
+		display: inline-block;
+	}
+	.primary-content{
+		margin-right:100px;
+		box-shadow: 0 0 15px  #795548;
+	}
+	.last-child{
+		margin-right:0;
+	}
+	.secondary-content{
+		margin:0;
+		width:100%;
+		height: 100%;
+		background: #ccc;
+		line-height:200px;
+		text-align: center;
+		background:#fff9c4;
+		box-shadow: 0 0 25px  #795548 inset;
+
+	}
+	hr{
+		height: 1px;
+		border:none;
+		background: #ccc;
+	}
+	@media screen and (max-width:1080px){
+		.container-g{
+			width:auto;
+			text-align:center;
+			
+		}
+		.primary-content,.secondary-content{
+			
+			font-size:0.75rem;
+			
+			margin:0;
+		}
+		h1{
+			font-size: 8vw;
+		}
+		
+	}
+</style>
+
+
+	<h1>Javascript - la mise en place</h1>
+	<script type="text/javascript">
+		$(function(){
+			$('h1').html('&lt;/&gt;Comment faire un rond');
+			$('title').html("Comment faire un rond?");
+
+		});
+	</script>
+	<div class="container-g">
+		<div class="primary-content">
+			<div class="secondary-content">
+				#Ronded
+			</div>
+		</div>
+		<div class="primary-content">
+			<div class="secondary-content">
+				#Ronded
+			</div>
+		</div>
+		<div class="primary-content last-child">
+			<div class="secondary-content">
+				#Ronded
+			</div>
+		</div>
+	</div>
+	<hr>
+	
+</body>
+</html>

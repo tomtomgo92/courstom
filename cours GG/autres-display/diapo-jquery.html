@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>diapo</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+	<style scoped>
+	body{
+		font:16px sans-serif;
+	}
+  img 
+  { 
+    position: absolute; // Les images vont se superposer
+  	left:0;
+  	top:0;
+    display: none; // Par défaut, elles ne seront pas affichées
+    width:200px;
+  	
+  }
+  .content-galerie{
+  	width:200px;
+  	height: 200px;
+  	position:relative;
+  	margin:0 auto;
+  	overflow: hidden;
+
+
+  }
+  p{
+  	width:200px;
+  	margin:0 auto;
+  	text-align: center;
+  }
+  
+
+ 
+</style>
+<div class="content-galerie">
+	<img src="image/00.jpg" id="img5">
+	<img src="image/01.jpg" id="img4">
+	<img src="image/03.jpg" id="img3">
+	<img src="image/04.jpg" id="img2">
+	<img src="image/00.png" id="img1">
+
+</div>
+<p>compteur</p>
+
+<script src="jquery.js"></script>
+<script>
+  $(function() {
+    var i=0;
+    affiche();
+
+    function affiche() {
+      i++;
+      if (i==1) precedent = '#img5'
+           else precedent = '#img' + (i-1);
+      var actuel = '#img' + i;
+      $('p').html(i);
+      $(precedent).fadeOut(2000);
+      $(actuel).fadeIn(2000);
+      
+      if (i==5) i=0;          
+    }
+
+    setInterval(affiche, 2000);
+  });
+</script>
+
+</body>
+</html>

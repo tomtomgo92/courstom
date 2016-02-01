@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>xmlhttprequest01</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <script type="text/javascript">
+        var xhr = null
+        
+        function getxhr() {
+            var msg=document.querySelector('h4');
+            if (window.XMLHttpRequest) {
+                xhr = new XMLHttpRequest();
+               // alert("xhr est un " + typeof(xhr));
+               msg.innerHTML="xhr est un " +xhr;
+
+            } else if (window.activeXObject) {
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+                alert("xhr est un " + typeof(xhr));
+            } else {
+                alert("votre navigateur n'est pas compatible avec AJAX");
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="screen.css" media="screen" />
+</head>
+
+<body>
+    <h4>XMLHttpRequest</h4>
+    <p>
+        Exemple : Vérifions au clic d'un bouton, si la variable <acronym title="XMLHttpRequest" onclick="javascript:alert(this.nodeName+'\nXMLHttpRequest')">xhr</acronym> est bien un objet XMLHttpRequest. La réponse est affichée dans une boîte de dialogue...
+    </p>
+    <div id="code">
+       
+            <button id="btn" onclick="getxhr()">Call +</button>
+        
+    </div>
+    <h3>Propriété &amp; Méthodes</h3>
+    <p>
+        Avant, de les étudier en détail, jetons un &oelig;uil sur les propriétés et méthodes de l'objet XMLHttpRequest :
+    </p>
+    <table>
+        <caption>Informations sur les propriété XMLHttpRequest</caption>
+        <tr>
+            <th class="info" width="30%">Proriété</th>
+            <th class="info">Déscription</th>
+        </tr>
+        <tr>
+            <td class="info">readyState</td>
+            <td class="info">Retourne l'état de la requête</td>
+        </tr>
+        <tr>
+            <td class="info">onreadyStatechage</td>
+            <td class="info">Gestionnaire d'évenement qui prend en charge les changements d'état de la requête
+            </td>
+            <tr>
+                <td class="info">status</td>
+                <td class="info">Renvoie le code numérique de la réponse du serveur HTTP
+                </td>
+            </tr>
+            <tr>
+                <td class="info">statusText</td>
+                <td class="info">Réponse du serveur sous forme de chaîne de caractère
+                </td>
+            </tr>
+            <tr>
+                <td class="info">responseXML</td>
+                <td class="info">Réponse du serveur sous forme d'un document XML
+            </tr>
+            <!--tableau 2-->
+    </table>
+    <table>
+        <caption>Les méthodes de l'objet XMLHttpRequest</caption>
+        <tr>
+            <th class="info" width="30%">Méthode</th>
+            <th class="info">Déscription</th>
+        </tr>
+        <tr>
+            <td class="info">open()</td>
+            <td class="info">Initialise la requête selon une série de paramètres fournis en argument</td>
+        </tr>
+        <tr>
+            <td class="info">send()</td>
+            <td class="info">Effectue la requête, avec éventuellement l'envoi de données
+            </td>
+            <tr>
+                <td class="info">getAllResponseHeaders()</td>
+                <td class="info">Renvoie l'ensemble de l'en-tête HTTP de la réponse sous la forme d'une chaîne de caractère
+                </td>
+            </tr>
+            <tr>
+                <td class="info">getResponseHeader()</td>
+                <td class="info">Renvoie la valeur d'un seul champs de l'en-tête HTTP sous forme d'une chaîne de caractère
+                </td>
+            </tr>
+            <tr>
+                <td class="info">setRequestHeader()</td>
+                <td class="info">Assigne une valeur à un champ d'en-tête HTTP éventuellement envoyé lors de la requête
+            </tr>
+            <tr>
+                <td class="info">overrideMimeType()</td>
+                <td class="info">Force un document à être traité selon un type de contenu(Mime Type)particulier
+            </tr>
+            <td class="info">abort()</td>
+            <td class="info">Annule la requête
+        </tr>
+
+    </table>
+</body>
+
+</html>

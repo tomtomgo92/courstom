@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,300,600' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body>
+	<style scoped>
+	body{
+		font:16px 'Raleway',sans-serif;
+		margin:0;
+	}
+		p,.msg{
+			width:800px;
+			margin:0 auto;
+			color:#fff;
+			background: #d50000;
+			display: none;
+			padding:3px;
+			position: relative;
+			line-height: 45px;
+			border-radius: 4px;
+			text-align: center;
+		}
+		.msg{
+
+			width: auto;
+			background: #fff9c4;
+			line-height: 40px;
+			border:solid 1px #fff59d;
+			color:#222;
+			display: none;
+		}
+		button{
+			position: absolute;
+			top:0;
+			right: 0;
+			background: transparent;
+			border:0;
+			text-shadow: 0 0 2px 1px #222;
+			font-size:1rem;
+			cursor: pointer;
+			color:#fff;
+
+		}
+		h1,h2,h3{
+			font-weight: 300;
+		}
+	</style>
+	<div class="msg">Attention ce site utilise des coockies</div>
+	<h1>Start jQuery</h1>
+	
+	<p></p>
+	<script>
+	
+		$(function(){
+			$('title').text("Start cours jQuery");
+			$('h1').css({"font-family" : "sans-serif","font-weight":"300","text-align" : "center","cursor":"pointer"});
+			$('h1').click(function(){
+				$('p').fadeIn("show").html(afficherdate());
+			});
+			//afficher message
+			if(navigator.cookieEnabled){
+					$('.msg').slideToggle(200).css("cursor","pointer");
+
+				}
+			$('.msg').on("click",function(){
+
+				$('.msg').slideToggle(400)
+
+			});
+			//date
+			$(function(){
+				var printOut=document.querySelector("p");
+				var d=new Date();
+				printOut.innerHTML="Nous sommes le : "+d.getDate()+"/"+(d.getMonth()+1)+"/"+d.getFullYear()+"<button>&times;</button>";
+				//fermer l'affichage
+				$("button").click(function(e){
+					$('p').fadeOut("show");
+					e.stopPropagation();
+
+					});
+				});
+
+
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>xmlhttprequest10</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="screen.css" media="screen" />
+  
+</head>
+
+<body>
+ <style scoped="scoped">
+ p{
+	border:0;
+	width:auto;
+	background:none;
+	text-align:justify;
+	}
+ #printOut{
+	display:none;
+ ]
+	
+ </style>
+    <h1>Cérimonie des César 2015</h1>
+       <div id="code">
+
+        <button id="btn">Send</button>
+
+    </div>
+    <div id="printOut"></div>
+    <script type="text/javascript">
+        function afficher(textdoc) {
+            var target = document.getElementById("printOut");
+            target.innerHTML = textdoc;
+        }
+
+        function extraire() {
+            var xhr = null;
+            if (window.XMLHttpRequest) {
+                xhr = new XMLHttpRequest();
+            } else if (window.ActiveXObjet) {
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            } else {
+                alert("votre navigateur n'est pas compatible avec AJAX...");
+            }
+            if (xhr) {
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        var textdoc = xhr.responseText;
+                        afficher(textdoc);
+                    }
+                }
+                document.getElementById("printOut").style.display = "block";
+                xhr.open("GET", "cesar.html", true);
+
+                xhr.send(null);
+            }
+
+        }
+		var btn = document.querySelector("#btn");
+        btn.addEventListener("click", extraire, false);
+    </script>
+</body>
+
+</html>

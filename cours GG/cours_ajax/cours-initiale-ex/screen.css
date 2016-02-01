@@ -1,0 +1,144 @@
+ body{
+	font:16px 'Open Sans',sans-serif;
+	font-size-adjust:0.5;
+  }
+ img{
+	max-width:100%;
+	display:block;
+ }
+ *{
+	box-sizing:border-box;
+ }
+ #printOut{
+	text-align:center;
+ 
+ }
+ p{
+	font-size:0.850rem;
+	
+ }
+ p,#printOut{
+	width:360px;
+	padding:5px;
+	background:#fffde7;
+	border:1px solid #fff59d;
+	margin:10px auto;
+	line-height:1.45em;
+}
+#printOut>img{
+	width:100%;
+	background:#fffde7;
+	
+}
+  p#out{
+	width:400px;
+	padding:3px;
+	background-color:#FFF;
+	border:0;
+	margin:5px auto;
+	line-height:1.45em;
+	display:none;
+	
+}
+#code{
+	width:360px;
+	margin:0 auto;
+	font-size:0.850rem;
+}
+
+h4,h3,h2,h1,#titre{
+	
+	color: #3A83B6;
+	width:auto;
+	margin:5px 0;
+	font-size:1.75rem;
+	text-align:center;
+	font-weight:300;
+}
+.strong{
+	color:red;
+
+}
+.weak{
+	color:navy;
+
+}
+table{
+	 width:500px;
+	 margin:5px auto;
+	 border:solid 1px #ccc;
+	 border-collapse:collapse;
+}
+ table caption{
+	color: #3B5998;
+	font-family:inherit;
+	margin-bottom:5px;
+		
+}
+table td.info, th.info{
+	font-family:inherit;
+	font-size:14px;
+	border:solid 1px #ccc;
+	border-collapse:collapse;
+	padding:3px;
+	
+}
+table th{
+	background-color:#3B5998;
+	color:#FFF;
+	padding:3px;
+	line-height:25px;
+	
+	
+}
+table tr{
+	background-color:#FFF;
+}
+table tr:hover, tr:focus{
+	background-color:#F2E06F;
+	cursor:pointer;
+}
+p a{
+	outline:1px dotted #ccc;
+	display:block;
+	width:50px;
+	margin:4px;
+	text-decoration:none;
+	color:#666;
+	padding:3px;
+	text-align:center;
+	
+}
+p a:hover{
+	text-decoration:underline;
+}
+
+p:first-line{
+	font-size:large;
+	line-height:35px;
+	color:#3A83B6;
+	
+
+	
+}
+#btn{
+border:1px solid #3079ED;
+	background-color:#4D90FE;
+	text-shadow:0 1px rgba(0, 0, 0, 0.1);
+	-moz-text-shadow:0 1px rgba(0, 0, 0, 0.1);
+	-webkit-text-shadow:0 1px rgba(0, 0, 0, 0.1);
+	color:#fff;
+	width:120px;
+	border-radius:2px 2px 2px 2px;
+	-moz-border-radius:2px 2px 2px 2px;
+	margin-bottom:auto;
+	cursor:pointer;
+	padding:3px;
+	line-height:1.45rem;
+	font-size:1rem;
+	
+	}
+#btn:hover{
+	background-color:#09C;
+	-moz-transition:all 0.218s ease 0s;
+}

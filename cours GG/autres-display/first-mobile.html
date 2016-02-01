@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<title>first-mobile &amp; responsive</title>
+<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,300,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<style scoped>
+	body{
+		font:16px 'Josefin Sans',sans-serif;
+		font-size-adjust:0.5;
+		margin:0;
+		background: #f5f5f5;
+	}
+	/* mobile first*/
+		img{
+			max-width: 100%;
+			height: auto;
+			margin:0 auto 5px;
+			display: block;
+		}
+		h1,h2{
+			margin:0;
+			text-align: center;
+			color:#fff;
+			font-size: 5vw;
+			background: #222;
+			line-height: 60px;
+			font-weight:400;
+		}
+		figure,ul{
+			margin:0;
+			padding:0;
+			list-style: none;
+		}
+
+		figure{
+			max-width:100%;
+			margin:auto;
+			background: #424242;
+			padding:5px;
+			margin-bottom:5px;
+		}
+		figure>img{
+			width: 100%;
+		}
+		figcaption>h2{
+			text-align: center;
+			margin:0;
+			padding:5px;
+			box-sizing:border-box;
+			color:#fff;
+			line-height: normal;
+			background: #424242;
+		}
+		
+		section{
+			width:auto;
+			
+		}
+		hr{
+			display: none;
+		}
+		@media only screen and (min-width: 640px){
+			ul>li{
+				display: inline-block;
+				margin:0;
+			}
+			
+		}
+		@media only screen and (min-width:768px){
+			ul>li:nth-child(2){
+				margin:0 64px;
+			}
+		}
+		@media only screen and (min-width: 800px){/*pour les écrans qui dépassent les 600px*/
+			h1{
+				margin-bottom:5px;
+				font-size:1.9rem;
+				font-weight: 300;
+			}
+			ul>li{
+				display: inline-block;
+			}
+			ul>li:nth-child(2){
+				margin:0 130px;
+			}
+			section{
+			width:900px;
+			margin:auto;
+			}
+			h2{
+				font-size:1rem;
+				font-weight: 300;
+			}
+			.picture{
+				border:solid 1px #222;
+			}
+			hr{
+				background: #ccc;
+				border:0;
+				height: 1px;
+				display: block;
+			}
+		}
+		
+		
+	</style>
+	<h1>&lt;/&gt; First-mobile for responsive</h1>
+	<img src="image/3.jpg" class="picture" alt="image">
+	<section class="inner-box">
+		<ul>
+			<li>
+				<figure>
+					<img src="image/00.jpg" alt="">
+					<figcaption>
+						<h2>Fashion</h2>
+					</figcaption>
+				</figure>
+		</li>
+			<li>
+				<figure>
+					<img src="image/01.jpg" alt="">
+					<figcaption>
+						<h2>Mode</h2>
+					</figcaption>
+				</figure>
+			</li>
+			<li>
+				<figure>
+					<img src="image/03.jpg" alt="">
+					<figcaption>
+						<h2>Tandences</h2>
+					</figcaption>
+				</figure>
+			</li>
+		</ul>
+	</section>
+	<hr>
+</body>
+</html>

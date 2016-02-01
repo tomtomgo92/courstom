@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+
+  <head>
+  <meta charset="UTF-8">
+  <title>Barres</title>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+	  var sMyDays=new String("Annnées");
+	   var sSales="Ventes";
+	   var sDep="Dépenses";
+        var data = google.visualization.arrayToDataTable([
+          [sMyDays, sSales, sDep],
+          ['2010',  1000,      400],
+          ['2011',  800,      460],
+          ['2012',  700,       1120],
+          ['2013',  1030,      540]
+        ]);
+
+        var options = {
+          title: 'Perfomance des entreprises',
+          hAxis: {title: 'Années', titleTextStyle: {color: '#3B5998'}}
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+	<style type="text/css">
+		#chart_div{
+			height: 500px;
+			position: relative;
+			width: 900px;
+			margin:0 auto;
+	}
+	h1{
+		margin:0 0 10px 0;
+		text-align:center;
+	}
+	h1 a{
+		text-decoration:none;
+		color:#3B5998;
+		font-family:sans-serif;
+		font-weight:lighter;
+	}
+	h1 a:hover{
+		text-decoration:underline;
+	}
+	</style>
+  </head>
+  <body>
+	<h1>
+		<a href="https://google-developers.appspot.com/chart/interactive/docs/gallery/combochart" target="_blank" title="statistique API">Statistiques</a><br>
+		
+	</h1>
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="president_xsl.xsl"?>
+<republique>
+<president>
+<nom>Charles de Gaulle</nom>
+	<mandat>1959-1969</mandat>
+	<naissance>1890</naissance>
+	<deces>decedé en 1970</deces>
+</president>
+<president>
+	<nom>Georges Pompidou</nom>
+	<mandat>1969-1974</mandat>
+	<naissance>1911 </naissance>
+	<deces>decedé en 1974</deces>
+</president>
+<president>
+	<nom>Valéry Giscard d'Estaing</nom>
+	<mandat>1974-1981</mandat>
+	<naissance>1926 </naissance>
+	<deces>il travail</deces>
+</president>
+</republique>

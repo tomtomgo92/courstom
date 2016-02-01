@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+	<meta charset="utf-8" />
+	<title>xmlhttprequest02</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="screen.css" media="screen" />
+</head>
+	<body>
+	<style scoped="scoped">
+		#printOut{
+			display:none;
+		}
+		#btn{
+			display:block;
+			margin:5px auto;
+			
+		}
+	</style>
+	<div id="printOut"></div>
+	<button id="btn">Send </button>
+	<script type="text/javascript">
+
+	function getxhr(){
+	var xhr=null;
+	if(window.XMLHttpRequest){
+	var xhr=new XMLHttpRequest();
+		}
+		else if(window.ActiveXObjet){
+		var xhr=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		else{
+		alert("votre navigateur n'est pas compatible avec AJAX...");
+		}
+		xhr.onreadystatechange=function(){
+		var monDiv=document.getElementById("printOut");
+			if(xhr.readyState==4 && xhr.status==200){
+			alert("fichier transmis!");
+			monDiv.style.display="block";
+			monDiv.innerHTML="fichier transmis avec succes!";
+			}
+		}
+		xhr.open("GET","test.txt",true);
+		xhr.send(null);
+	}
+	var btn=document.querySelector("#btn");
+	btn.addEventListener("click",getxhr,false);
+	
+
+	</script>
+	</body>
+</html>

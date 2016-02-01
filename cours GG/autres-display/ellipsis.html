@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="FR-fr"> 
+    <head> 
+        <meta charset="UTF-8">
+		<meta name="description" content="Démo css pour la propriété text-overflow et display: flex, responsive"/>
+        <title>Text-overflow et white-space</title>
+        <link rel="icon" type="image/png" href="image/logo.png">
+        <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,100,100italic,300,300italic,600,700' rel='stylesheet' type='text/css'>
+    </head> 
+    <body> 
+    	 <style scoped="scoped"> 
+			body{
+				font:16px 'Josefin Sans',sans-serif;
+				margin:0;
+				font-size-adjust:0.5;
+				background: #fafafa;
+			}
+			p,h1,h2,h3{
+				margin:0;
+			}
+			.inner-header{
+				background: #222;
+				line-height: 60px;
+			}
+			h1{
+				font-weight: 300;
+				text-align: center;
+				color:#fff;
+			}
+			.inner-text{
+				width:400px;
+				height:50px;
+				margin: 10px auto;
+
+			}
+			.inner-text>p{
+				width: auto;
+				text-overflow: ellipsis; 
+				overflow: hidden;
+				white-space: nowrap; 
+				
+				
+				
+			}
+			.inner-galery{
+
+				display: flex;
+				display: -webkit-box;
+				display: -webkit-flex;
+				width:800px;
+				margin:0 auto;
+				border:solid 1px transparent;
+				padding:5px 0 0 5px;
+				justify-content:center;
+				-webkit-justify-content:center;
+				
+				flex-wrap: wrap;
+				-webkit-flex-wrap:wrap;
+				box-sizing:border-box;
+			}
+			.picture-box{
+				width:12.5555%;
+				height:100px;
+				background: #ccc;
+				margin:0 5px 5px 0;
+				text-align: center;
+				line-height: 100px;
+				border:solid 1px #ccc;
+			}
+			.picture-box-large{
+				width:25.625%;
+
+			}
+			.picture-box:last-child{
+				height: 12.5555%;
+			}
+			.picture-box-medium{
+				width:50%;
+			}
+			.picture-box-x-large{
+				width:100%;
+			}
+			img{
+				width:100%;
+				display: block;
+				height: 100%;
+			}
+			.footer{
+			width:auto;
+			text-align: center;
+			margin: 5px 0;
+			font-size:0.875rem;
+			}
+			/*responsive*/
+
+			@media screen and (max-width: 1080px){
+					.inner-galery,.inner-text{
+						width:auto;
+					}
+					.inner-text{
+						text-align: center;
+					}
+					h1{
+						font-size:5vw;
+						white-space: nowrap;
+						text-overflow: ellipsis; 
+						overflow: hidden;
+					}
+					.picture-box{
+						height:12.5555%;
+
+					}
+					summary{
+						font-size:3vw;
+					}
+
+			}
+        </style>
+        <header class="inner-header">
+        		<h1>&lt;/&gt;La propriété text-overflow &amp; white-space</h1>
+        </header>
+          
+			<div class="inner-text">
+				<p>Bonjour molestie leo vel magna pretium, quis laoreet nisi consectetur. Etiam </p>
+			</div>
+         <div class="inner-galery">
+         	<div class="picture-box">
+         		<img src="image/00.jpg" alt="">
+         	</div>
+         	<div class="picture-box">
+         		<img src="image/01.jpg" alt="">
+         	</div>
+         	<div class="picture-box">
+         		<img src="image/03.jpg" alt="">
+         	</div>
+         	<div class="picture-box">
+         		<img src="image/00.png" alt="">
+         	</div>
+         	<div class="picture-box">
+         		<img src="image/04.jpg" alt="">
+         	</div>
+         	<div class="picture-box">
+         		<img src="image/05.jpg" alt="">
+         	</div>
+         	<div class="picture-box">
+         		<img src="image/06.jpg" alt="">
+         	</div>
+       
+	         	<div class="picture-box picture-box-large">
+	         		<img src="image/5.jpg" alt="">
+	         	</div>
+	         	<div class="picture-box picture-box-medium">
+	         		<img src="image/3.jpg" alt="">
+	         	</div>
+         	
+         	<div class="picture-box picture-box-x-large">
+         		<img src="image/pano.jpg" alt="">
+         	</div>
+         </div>
+         <div class="footer">
+			<details>
+				<summary>&copy; - Giusmili - 2015</summary>
+			</details>
+		</div>
+    </body> 
+</html> 

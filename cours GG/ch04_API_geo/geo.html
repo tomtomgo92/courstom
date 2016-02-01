@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Géolocalisation</title>
+<script type="text/javascript">
+	function succesGeo(position){
+		//alert(typeof(position));
+		var infopos="Position déterminé : <br />";
+		infopos+="Latitude : "+position.coords.latitude+"<br />";
+		infopos+="Longitude : "+position.coords.longitude+"<br />";
+		infopos+="Altitude : "+position.coords.altitude+"<br />";
+		document.getElementById("maposition").innerHTML=infopos;
+		
+	}
+	navigator.geolocation.watchPosition(succesGeo);
+	//window.addEventListener("load",succesGeo);
+</script>
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+  body{
+  	font:16px 'Roboto',sans-serif;
+  	font-size-adjust:0.5;
+  	background: #fafafa;
+  }
+  *{
+  	-webkit-box-sizing: border-box;
+  	-moz-box-sizing: border-box;
+  	box-sizing: border-box;
+  }
+  #maposition{
+	width:60.1851851852%;
+	padding:3px;
+	background-color:#fff9c4;
+	border:1px solid #fff176;
+	display:block;
+	font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+    font-size: inherit;
+	margin:0 auto 38px;
+	line-height:1.45em;
+}
+
+#maposition {
+	position: relative;
+	border: 4px solid #ffeb3b;
+}
+#maposition:after, #maposition:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+#maposition:after {
+	border-color: rgba(255, 249, 196, 0);/*cela donne comme effet la couleur du bg*/
+	border-top-color: #FFF9C4;
+	border-width: 30px;
+	margin-left: -30px;
+}
+#maposition:before {
+	border-color: rgba(255, 235, 59, 0);
+	border-top-color: #ffeb3b;
+	border-width: 36px;
+	margin-left: -36px;
+}
+
+
+h1{
+	font-family:inherit;
+	color: #3A83B6;
+    margin:5px auto;
+	font-size:1.90rem;
+	text-align:center;
+	font-weight: 400;
+}
+
+  </style>
+</head>
+
+<body>
+<h1>La géolocalisation</h1>
+<div id="maposition">Détection mais aucune donnée affichée...</div>
+
+
+</body>
+</html>

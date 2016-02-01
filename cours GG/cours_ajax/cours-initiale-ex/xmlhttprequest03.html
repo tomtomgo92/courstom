@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+	<meta charset="utf-8" />
+	<title>xmlhttprequest03</title>
+	<script type="text/javascript">
+
+	function getxhr(){
+		var xhr=null;
+		alert(typeof(xhr));
+		if(window.XMLHttpRequest){
+		var xhr=new XMLHttpRequest();
+		}
+			else if(window.ActiveXObjet){
+			var xhr=new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			else{
+			alert("votre navigateur n'est pas compatible avec AJAX...");
+		}
+		
+		xhr.onreadystatechange=function(){
+		monDiv=document.getElementById("DivElement");
+	if(xhr.readyState==1){
+		monDiv.innerHTML+= "Status: 1 (loading)<br />";
+		}
+		if(xhr.readyState==2){
+		monDiv.innerHTML+= "Status: 2 (loaded)<br />";
+		}
+	if(xhr.readyState==3){
+	monDiv.innerHTML+= "Status: 3 (interactive)<br />";
+	}
+		if(xhr.readyState==4){
+		monDiv.innerHTML+= "Status: 4 (complete)<br />";
+		}
+	}
+		xhr.open("GET","test.txt",true);
+		xhr.send(null);
+	}
+	
+	</script>
+		
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>	
+		<link rel="stylesheet" href="screen.css" media="screen" />
+	</head>
+<body>
+<style scoped="scoped">
+
+		#DivElement{
+			color:red;
+			width:360px;
+			margin:5px auto;
+			display:block;
+			
+		}
+
+		</style>
+	<h4>XMLHttpRequest la propriété Status</h4>
+	<p>
+	Exemple : Notons au clic d'un bouton, les différents états de la requête. 
+	La réponse est affichée dans une div. Le fichier test.txt est inchangé.
+	</p>
+	<div id="code">
+		
+		<button id="btn" onclick="getxhr()">Request</button>
+		
+	</div>
+	<div id="DivElement"></div>
+	<h4>Propriété status</h4>
+	<p>
+	La propriété status renvoie le code HTTP indiquant le résultat de la dernière requête efféctuée.<br />
+	Celui-ci vaut par éxemple :<br />
+	200 si la requête a été executée avec succès<br />
+	403 pour accès interdit<br />
+	404 pour un fichier non trouvé<br />
+	500 pour une erreur interne.
+	</p>
+	<table >
+		<tr>
+			<th class="info">Code</th><th class="info">Description</th>
+		</tr>
+		<tr>
+			<td class="info">100</td><td class="info">Continue</td>
+		</tr>
+		<tr>
+			<td class="info">101</td><td class="info">Switching protocols</td>
+		</tr>
+		<tr>
+			<td class="info">200</td><td class="info">ok</td>
+		<tr>
+			<td class="info">201</td><td class="info">Created</td>
+		</tr>
+		<tr>
+			<td class="info">202</td><td class="info">Accepted</td>
+		</tr>
+		<tr>
+			<td class="info">203</td><td class="info">Non-Autoritative formation</td>
+		</tr>
+		<tr>
+			<td class="info">204</td><td class="info">No content</td>
+		</tr>
+		<tr>
+			<td class="info">205</td><td class="info">Reset content</td>
+		</tr>
+		<tr>
+			<td class="info">206</td><td class="info">Partial content</td>
+		</tr>
+		<tr>
+			<td class="info">300</td><td class="info">Multiple Choices</td>
+		</tr>
+		<tr>
+			<td class="info">301</td><td class="info">Moved Permanently</td>
+		</tr>
+		<tr>
+			<td class="info">302</td><td class="info">Found</td>
+		</tr>
+		<tr>
+			<td class="info">303</td><td class="info">See Other</td>
+		</tr>
+		<tr>
+			<td class="info">304</td><td class="info">Not modified</td>
+		</tr>
+		<tr>
+			<td class="info">305</td><td class="info">Use Proxy</td>
+		</tr>
+		<tr>
+			<td class="info">307</td><td class="info">Temporary Redirect</td>
+		</tr>
+		<tr>
+			<td class="info">400</td><td class="info">Bad Request</td>
+		</tr>
+		<tr>
+			<td class="info">401</td><td class="info">Unauthorized</td>
+		</tr>
+		<tr>
+			<td class="info">402</td><td class="info">Payement Required</td>
+		</tr>
+		<tr>
+			<td class="info">403</td><td class="info">Forbudden</td>
+		</tr>
+		<tr>
+			<td class="info">404</td><td class="info">Not found</td>
+		</tr>
+		<tr>
+			<td class="info">405</td><td class="info">Method Not Allowed</td>
+		</tr>
+	</table>
+
+</body>
+</html>

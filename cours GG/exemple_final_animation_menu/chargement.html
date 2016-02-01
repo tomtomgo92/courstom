@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Chargement</title>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+		body{
+			margin:0;
+			font-family:'Ubuntu Condensed', sans-serif;
+			font-size:40px;
+			color:#fff;
+			text-align:center;
+		}
+		h1,section{
+			font-weight:300;
+			height: 500px;
+			line-height: 500px;
+			background-color:#27ae60;
+			
+		}
+		
+		/*loader quart de cercle*/
+		
+		.loader{
+			width: 50px;
+			height: 50px;
+			display:inline-block;
+			vertical-align:middle;
+			position:relative;
+		}
+		.loader-quart{
+			border-radius:50%;
+			border: 6px solid rgba(255,255,255,0.4);
+			
+		}
+		.loader-quart:after{
+			content:'';
+			position:absolute;
+			top:-6px; 
+			left:-6px;
+			bottom: -6px;
+			right: -6px;
+			border-radius:50%;
+			border: 6px solid transparent;
+			border-top-color:#fff;
+			animation:spin 1s linear infinite;
+			-moz-animation:spin 1s linear infinite;
+			-webkit-animation:spin 1s linear infinite;
+			
+		}
+		@-webkit-keyframes spin{
+			0%{-webkit-transform: rotate(0deg); transform: rotate(0deg);}
+			100%{-webkit-transform: rotate(360deg);transform: rotate(360deg);}
+		}
+		@-moz-keyframes spin{
+			0%{-moz-transform: rotate(0deg); transform: rotate(0deg);}
+			100%{-moz-transform: rotate(360deg);transform: rotate(360deg);}
+		}
+		
+		/*deuxième loader*/
+		
+		
+		.section{
+			background-color:#2980b9;
+		}
+		.loader-double{
+			border-radius:50%;
+			border: 6px solid transparent;
+			border-top-color:#fff;
+			border-bottom-color:#fff;
+			-moz-animation:spin 1s linear infinite;
+			-webkit-animation:spin 1s linear infinite;
+			
+		}
+		.loader-double:after{
+			content:'';
+			position:absolute;
+			top:5px; 
+			left:5px;
+			bottom: 5px;
+			right: 5px;
+			border-radius:50%;
+			border: 6px solid transparent;
+			border-top-color:#fff;
+			border-bottom-color:#fff;
+			opacity:0.6;
+			-moz-animation:spin 1s linear infinite;
+			-webkit-animation:spin 1s linear infinite;
+			
+		}
+	
+		@-webkit-keyframes spinriverse{
+			0%{-webkit-transform: rotate(360deg); transform: rotate(360deg);}
+			100%{-webkit-transform: rotate(0deg);transform: rotate(0deg);}
+		}
+		@-moz-keyframes spinriverse{
+			0%{-moz-transform: rotate(360deg); transform: rotate(360deg);}
+			100%{-moz-transform: rotate(0deg);transform: rotate(0deg);}
+		}
+		
+		
+		/*loader circle*/
+		
+		.section-3{
+			background-color:#e74c3c;
+		}
+		.loader-circles{
+			border-radius:50%;
+			border: 3px solid transparent;
+			border-top-color:#fff;
+			-moz-animation:spin 1s linear infinite;
+			-webkit-animation:spin 1s linear infinite;
+			
+		}
+		.loader-circles:after{
+			content:'';
+			position:absolute;
+			top:5px; 
+			left:5px;
+			bottom: 5px;
+			right: 5px;
+			border-radius:50%;
+			border: 3px solid transparent;
+			border-top-color:#fff;
+			opacity:0.8;
+			-moz-animation:spin 5s linear infinite;
+			-webkit-animation:spin 5s linear infinite;
+		}
+		.loader-circles:before{
+			content:'';
+			position:absolute;
+			top:10px; 
+			left:10px;
+			bottom: 10px;
+			right: 10px;
+			border-radius:50%;
+			border: 3px solid transparent;
+			border-top-color:#fff;
+			opacity:0.5;
+			-moz-animation:spin 10s linear infinite;
+			-webkit-animation:spin 10s linear infinite;
+		}
+		
+		/*qautrième loader*/
+		
+		.loader-bars:before{
+			content:'';
+			position:absolute;
+			display:block;
+			top:0; 
+			left:0;
+			width: 10px;
+			height: 30px;
+			background-color: #fff;
+			animation: grow 1.5s linear infinite;
+			-webkit-animation: grow 1.5s linear infinite;
+			-moz-animation: grow 1.5s linear infinite;
+		}
+		.loader-bars:after{
+			content:'';
+			position:absolute;
+			display:block;
+			top:0; 
+			left:15px;
+			width: 10px;
+			height: 30px;
+			background-color: #fff;
+			animation:  grow 1.5s linear -.5s infinite;
+			-webkit-animation: grow 1.5s linear -.5s infinite;
+			-moz-animation:  grow 1.5s linear -.5s infinite;
+		}
+		.loader-bars span{
+		
+			content:'';
+			position:absolute;
+			display:block;
+			top:0; 
+			left:30px;
+			width: 10px;
+			height: 30px;
+			background-color: #fff;
+			animation:  grow 1.5s linear -.1s infinite;
+			-webkit-animation: grow 1.5s linear -.1s infinite;
+			-moz-animation:  grow 1.5s linear -.1s infinite;
+		}
+		@-webkit-keyframes grow{
+			0%{-webkit-transform: scaleY(0);opacity:0;}
+			50%{-webkit-transform: scaleY(1);opacity:1;}
+			100%{-webkit-transform: scaleY(0);opacity:0;}
+		}
+		@-moz-keyframes grow{
+			0%{-moz-transform: scaleY(0);opacity:0;}
+			50%{-moz-transform: scaleY(1);opacity:1;}
+			100%{-moz-transform: scaleY(0);opacity:0;}
+		}
+		@keyframes grow{
+			0%{transform: scaleY(0);opacity:0;}
+			50%{transform: scaleY(1);opacity:1;}
+			100%{transform: scaleY(0);opacity:0;}
+		}
+		
+	</style>
+</head>
+<body>
+	<section>
+		<span class="loader loader-quart"></span>
+		Chargement...
+	</section>
+	<section class="section">
+		<span class="loader loader-double"></span>
+		Chargement...
+	</section>
+	<section class="section section-3">
+		<span class="loader loader-circles"></span>
+		Chargement...
+	</section>
+	<section class="section section-4">
+		<span class="loader loader-bars">
+		<span></span></span>
+		Chargement...
+	</section>
+</body>
+</html>

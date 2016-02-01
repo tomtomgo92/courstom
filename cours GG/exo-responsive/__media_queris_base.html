@@ -1,0 +1,83 @@
+﻿<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+	<meta name="viewport" content="width=320">
+	<meta charset="UTF-8">
+	<title>Média queris</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+		/* Paragraphes en bleu par défaut */
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-weight:normal;
+	
+}
+*{
+	box-sizing:border-box;
+}
+#content{
+	width:800px;
+	margin:auto;
+	}
+	h1{
+		font-weight:inherit;
+		width:800px;
+		border:solid 1px transparent;
+		border-top-color:#ccc;
+		border-bottom-color:#ccc;
+		font-weight:lighter;
+		padding:5px;
+		background:#EFEFEF;
+	}
+	p
+	{
+		color: blue;
+		width:800px;
+		border:solid 1px transparent;
+		border-top-color:#ccc;
+		border-bottom-color:#ccc;
+		background:#EFEFEF;
+		padding:5px;
+	}
+	img{
+		
+		
+	}
+	@media screen and (max-width:1080px){
+		#content,h1,p{
+			width: auto;
+			margin: 0;
+
+		}
+		h1{
+			margin-bottom:20px;
+			color: #fff;
+			background: #cddc39;
+			font-size: 5wv;
+		}
+		p{
+			margin-bottom: 20px;
+			color: #fff;
+			background: #000;
+			font-size: 3wv;
+		}
+		img{
+			display: block;
+			margin: 0 auto;
+		}
+	}
+ 
+/* Nouvelles règles si la fenêtre fait au plus 1024px de large */
+	
+	</style>
+</head>
+<body>
+<div id="content">
+	<h1>Les media queries</h1>
+	<p>
+		Les media queries sont surtout utilisées pour adapter le design du site aux différentes largeurs d'écran.
+	</p>
+	<img src="image/logo.gif" alt="logo" />
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Try et catch</title>
+<link rel="stylesheet" href="screen.css" media="screen" />
+<style type="text/css">
+	p:first-line{
+	font-size:x-large;
+	}
+</style>
+</head>
+
+<body>
+
+<script type="text/javascript">
+try{//designe le code qui doit être essayé
+requeteAjax=new ActiveXObject('Microsoft.XMLHTTP');
+	alert('Vous êtes sous IE');
+	}
+	catch(err){//Si aucune erreur n'est survenue le bloc de catch est ignoré on passe à ligne suivante
+	try{
+		requeteAjax=new ActiveXObject('Msxml2.XMLHTTP');
+	alert('Vous êtes sous IE');
+	}
+		catch(err){
+		try{
+		requeteAjax=new XMLHttpRequest();
+		alert('Vous n\'êtes pas sous IE');
+		}
+		catch(err){
+			requeteAjax=null;
+			alert('Votre navigateur ne supporte pas AJAX');
+			}
+		}
+	}
+</script>
+<h3>Try et catch</h3>
+	<p>
+	La version javascript 1.5 a introduit un gestionnaire d'exception avec les instructions try &amp; catch.
+	Le principe est simple. L'instruction try désigne le code qui doit être testé. Si aucune erreur n'est survenue
+	le bloc de commandes de catch est simplement ignoré. Si par contre, une exception ou erreur est détectée, le
+	contrôle de l'exécution passe directement au bloc de commande désigné par l'instruction catch. Le type d'exception
+	est identifié dans une variable<em>(indentificateur)</em>. A la fin du bloc catch, le programme continue son exécution
+	par l'instruction qui suit.
+	</p>
+	<div id="code">
+	<code>
+	<pre>
+	try
+	{
+	//instruction à tester
+		}
+		catch(identificateur)
+		{
+	//instruction alternative
+	}
+	</pre>
+	<code>
+	</div>
+</body>
+</html>

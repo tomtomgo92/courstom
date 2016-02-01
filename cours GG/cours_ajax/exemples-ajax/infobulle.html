@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="FR-fr">
+<head>
+<meta charset="utf-8" />
+
+<title>infobulle</title>
+<link href='http://fonts.googleapis.com/css?family=Comfortaa:400,300,700' rel='stylesheet' type='text/css'>
+<style type="text/css">
+body{
+		font:16px 'Comfortaa',sans-serif;
+		
+	}
+	
+#popup{
+		position:absolute;
+		top:10px;
+		z-index:10;
+		left:10px;
+		width:450px;
+		background:#f9fbe7;
+		height:auto;
+		font:.9em arial, sans-serif;
+		padding:5px;
+		visibility:hidden;
+		border: 1px #ccc solid;
+		clip: auto;
+		overflow:hidden;
+		box-shadow:3px 3px 6px #999;
+		-moz-box-shadow:3px 3px 6px #999;
+		-webkit-box-shadow:3px 3px 6px #999;
+		-o-box-shadow:3px 3px 6px #999;
+		}
+		a{
+		color:#000000; text-decoration:none;
+		color:#900;
+		display:block;
+		width:140px;
+		line-height:45px;
+		padding:3px;
+		border-bottom:solid 1px #ccc;
+		transition-duration:0.5s;
+		-webkit-transition-duration:0.5s;
+		-moz-transition-duration:0.5s;
+		
+		}
+		
+		a:hover{
+			background:#e0f2f1;
+			border-bottom-color:#1565c0;
+		}
+		h3{
+		color: #3A83B6;
+		font-style: italic;
+		width:500px;
+	
+		font-size:1.50em;
+		text-align:left;
+	}
+	.content-primary{
+		position: relative;
+		width:489px;
+		margin:0 auto;
+	}
+	
+		
+</style>
+</head>
+
+	<body>
+	<div class="content-primary">
+		<h3>Previsualisation au survol du lien</h3>
+		<p>
+			<a href="page1.html">Check this page&nbsp;&rsaquo;</a>
+			<a href="page2.html">Check this page&nbsp;&rsaquo;</a>
+			<a href="page3.html">Check this page&nbsp;&rsaquo;</a>
+			</p>
+		
+	</div>
+	<div id="popup"></div>
+			<script type="text/javascript">
+
+	window.onload=initial;
+	var xhr=null;
+	var xPos;
+	var yPos;
+	function initial(){
+		var liens=document.getElementsByTagName("a");
+		for(var i=0; i<liens.length; i++){
+		liens[i].onmouseover=previsualisation;
+		}
+	}
+	function cacher(){
+	document.getElementById("popup").style.visibility="hidden";
+	}
+	function previsualisation(evt){
+		if(evt){
+		var url=evt.target;//chemin des pages
+		//alert(url);
+		//alert(evt);
+		}
+		else{
+		evt=window.event;
+		
+		var url=evt.srcElement;
+		}
+			xPos=evt.clientX;
+			yPos=evt.clientY;
+			if(window.XMLHttpRequest){
+			xhr=new XMLHttpRequest();
+			}
+		else{
+		if(window.ActiveXobject){
+		try{
+		xhr=new ActiveXobject("Microsoft.XMLHTTP");
+		}
+	catch(e){}
+	}
+		}
+		if(xhr){
+		xhr.onreadystatechange=afficher;
+		xhr.open("GET", url, true);
+		xhr.send(null);
+		}
+	else{
+		alert("pas de compatibilité avec votre navigateur");
+		}
+	}
+	function afficher(){
+			var previsu=document.getElementById("popup");
+			if(xhr.readyState==4){
+			if(xhr.status==200){
+			previsu.innerHTML=xhr.responseText;
+			previsu.style.top=(yPos+10)+"px";
+			previsu.style.left=(xPos+10)+"px";
+			previsu.style.visibility="visible";
+			previsu.onmouseout=cacher;
+			}
+		else{previsu.innerHTML="la page n'est pas disponible.<br /><br /> Erreur : " +xhr.status;}
+		}
+	}
+
+</script>
+	</body>
+</html>

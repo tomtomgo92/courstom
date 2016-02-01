@@ -1,0 +1,77 @@
+body{
+	font:100% 'Lobster Two',sans-serif;
+	}
+	ul{
+		width:483px;
+		margin:50px auto;
+		
+
+	}
+	ul li{ position:relative;
+		float:left; 
+		width:100px;
+		height:100px;
+		padding:10px;
+		list-style:none; 
+		} /*permet de créer deux lignes*/ 
+		
+	ul li:nth-child(5n){
+		clear:left;
+		}
+	ul li a{
+		 display:block;
+		 overflow:hidden; 
+		 width:100px;
+		 height:100px; 
+		 margin-top:0px;
+		 margin-left:0px; 
+		 border:0px solid rgba(0,0,0,0.7);
+		 border-radius:50%;
+		 transition-property:width,height,margin,z-index,border;
+		 transition-duration:0.4s;
+		 -webkit-transition-property:width,height,margin,z-index,border;
+		 -webkit-transition-duration:0.4s;
+		
+			  
+		} 
+ul li a:hover{ 
+		position:absolute; 
+		width:200px;
+		height:200px; 
+		margin-top:-56px;
+		margin-left:-56px; 
+		z-index:100; 
+		border:6px solid rgba(0,0,0,0.7);
+		border-radius:6px;
+		opacity:0.8;
+		 } 
+	ul li a img{
+		 position:absolute;
+		 width:100px;
+		height:100px;
+		 z-index:20; 
+		transition-property:width,height,z-index;
+		transition-duration:0.4s; 
+		-webkit-transition-property:width,height,z-index;
+		-webkit-transition-duration:0.4s; 
+		
+			  	} 
+	ul li a:hover img{ 
+		width:200px;
+		height:200px; 
+		z-index:100;
+		}
+	hr {
+	  height: 1px;
+	  margin: -0.5em 0;
+	  padding: 0;
+	  color: #F00;
+	  background-color: #ccc;
+	  border: 0;
+	}
+	h1{
+		font-size:1.80em;
+		text-align:center;
+		font-weight:400;
+		color:#333333;
+	}

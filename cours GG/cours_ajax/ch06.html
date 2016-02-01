@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="FR-fr">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>AJAX cours initiation</title>
+	<script type="text/javascript">
+	function afficher(xmldocument,personnes){
+		//alert(typeof(personnes));
+	var ordre=(personnes.selectedIndex-1);
+	if(ordre!=-1){
+		var affichage=document.getElementById("out");
+		affichage.style.display="block";
+		//liste des élements xml
+		
+		nouedsmandat=xmldocument.getElementsByTagName("mandat");
+		nouedsnaissance=xmldocument.getElementsByTagName("naissance");
+		nouedsdeces=xmldocument.getElementsByTagName("deces");
+
+	//recupération du contenu xml
+
+		var textemandat=nouedsmandat[ordre].firstChild.nodeValue;
+		var textenaissance=nouedsnaissance[ordre].firstChild.nodeValue;
+		var textedeces=nouedsdeces[ordre].firstChild.nodeValue;
+
+		
+		var targetmandat=document.getElementById("idmandat");
+		var targetnaissance=document.getElementById("idnaissance");
+		var targetdeces=document.getElementById("deces");
+
+
+	targetmandat.innerHTML=textemandat;
+	targetnaissance.innerHTML=textenaissance;
+	targetdeces.innerHTML=textedeces;
+
+	}
+	}
+	var xhr=null;
+		function extraire(personnes){
+		if(window.XMLHttpRequest){
+		xhr=new XMLHttpRequest();
+		}
+	else if(window.ActiveXObjet){
+		xhr=new ActiveXObject("Microsoft.XMLHTTP");
+		}
+		else{
+		alert("votre navigateur n'est pas compatible avec AJAX...");
+		}
+		if(xhr){
+		xhr.onreadystatechange=function(){
+		if(xhr.readyState==4 && xhr.status==200){
+		var xmldocument=xhr.responseXML;
+		afficher(xmldocument,personnes);
+		}
+	}
+	xhr.open("GET","president01.xml",true);
+	xhr.send(null);
+		}
+	}
+	</script>
+	 <link href='http://fonts.googleapis.com/css?family=Comfortaa:400,300,700' rel='stylesheet' type='text/css'>
+	  <style type="text/css">
+	   body{
+		font:16px/35px 'Comfortaa',sans-serif;
+	  }
+	  *{
+		box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+	  }
+	  #formulaire{
+		width:500px;
+		padding:3px;
+		background-color:#FFF;
+		border:1px solid #E2C822;
+		display:block;
+		margin:5px auto;
+		line-height:1.45em;
+		padding:8px;
+	}
+	 #out{
+		width:500px;
+		padding:3px;
+		background-color:#fffde7;
+		border:1px solid #E2C822;
+		margin:5px auto;
+		line-height:1.45em;
+		display:none;
+	}
+	h1{
+		color: #3A83B6;
+		font-style: italic;
+		width:400px;
+		margin:5px auto;
+		font-size:1.50em;
+		text-align:center;
+		font-weight:300;
+	}
+	.strong{
+	color:red;
+
+	}
+	.weak{
+	color:navy;
+
+	}
+	p a{
+		outline:1px dotted #ccc;
+		display:block;
+		width:50px;
+		margin:4px;
+		text-decoration:none;
+		color:#666;
+		padding:3px;
+		text-align:center;
+	}
+	p a:hover{
+		text-decoration:underline;
+		
+	}
+	#idnom, #idprenom{
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bolder; color:#FFFFFF;
+	}
+	#idadresse{
+	font-style:italic; color:#FFFFFF;
+	}
+	#idtelephone{
+	font-weight:bold;
+	font-family:Verdana, Arial, Helvetica, sans-serif; color:#FFFFFF;
+	}
+	#idcp, #idville{
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bolder; color:#000000;
+	}
+	input[type="button"]{
+		display:inline-block;
+		border:none;
+		width:110px;
+		line-height:35px;
+		text-align:center;
+		color:#fff;
+		background:  #2196f3;
+		font-size:1rem;
+		border-radius:4px;
+	}
+	select{
+		padding:10px;
+	}
+	  </style>
+	</head>
+
+	<body>
+		<h1>AJAX : afficher les présidents</h1>
+		<div id="formulaire">
+			<form action="">
+				<fieldset style="border:none; padding:5px;">
+					<legend style="font-variant:small-caps; color:#003399;">Choisissez un président</legend>
+					<select name="personnes">
+						<option>Faites votre choix</option>
+						<option>Charles de Gaulle</option>
+						<option>Georges Pompidou</option>
+						<option>Valéry Giscard d'Estaing</option>
+						<option>Souffre Jean</option>
+					</select>
+					<input type="button" onclick="extraire(personnes)" value="coordonnées" />
+				</fieldset>
+			</form>
+		</div>
+			<div id="out" style="display:none;">
+				Mandat : <span id="idmandat">
+				</span>
+				<br />
+				Naissance : <span id="idnaissance"></span>
+				<br />
+				Statut : <span id="deces"></span>
+			</div>
+	</body>
+</html>

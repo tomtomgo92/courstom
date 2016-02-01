@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <title>xmlhttprequest00</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <script type="text/javascript">
+        function test() {
+            var xhr;
+            var msg = String("L'objet XMLHttpRequest a été créé");
+
+            try {
+                xhr = new XMLHttpRequest();
+            } catch (e) {
+
+                var XmlHttpVersion = new Array('MSXML2.XMLHTTP.6.0', 'MSXML2.XMLHTTP.5.0', 'MSXML2.XMLHTTP.4.0', 'MSXML2.XMLHTTP.3.0', 'MSXML2.XMLHTTP', 'Microsoft.XMLHTTP');
+                for (var i = 0; i < XmlHttpVersion.length && !xhr; i++) {
+                    try {
+                        xhr = new ActiveXObject(XmlHttpVersions[i]);
+                    } catch (e) {}
+                }
+
+                if (!xhr)
+                    alert("L'object XMLHttp n'a pas été créé.");
+            }
+            //alert("L'objet est crée");
+
+            affiche.innerHTML = msg+" "+xhr;
+        }
+
+        window.addEventListener("load", test, true);
+    </script>
+    <link rel="stylesheet" href="screen.css" media="screen" />
+</head>
+
+
+</body>
+<h4 id="affiche"></h4>
+<p>
+    L'objet XMLHttpRequest permet d'envoyer des requêtes HTTP vers le serveur, de recevoir des réponses et de mettre à jour une partie de la page web. En mode asynchrone, cette mise à jour se réalise sans avoir à recharger la page et donc de façon transparente pour le visiteur.
+    <br /> L'objet XMLHttpRequest s'utilise donc dans une architecture de type cleint/serveur.
+</p>
+<p>
+    Détaillons son mode de fonctionnement:
+    <em><strong>L'objet XMLHttpRequest est créé par le moteur javascript du navigateur<br />
+	Cet objet est alors utilisé pour effectuer une requête HTTP vers le serveur.<br />
+	La réponse est fournie par ce dernier au navigateur.<br />
+	A l'aide du Xhtml et des CSS, le résultat est ensuite affiché.
+	</strong>
+	</em>
+    <p>
+        L'avantage des applications Ajax réside pricipalement dans la déminution de la bande passante car seules les données réclamées sont affichées sans avoir à recharger toute la page, d'où une interactivité et une fluidité accrue.
+    </p>
+    <p>
+        L'objet XMLHttpRequest a initialment été développé en tant que contrôle ActiveX de Microsoft Core Service(MSXML), implémenté dans IE 5.0, soit en 1999. Il y eu, au fil des années, différentes versions de ce composant :
+        <br />
+        <strong><em>
+	Microsoft.XMLHTTP<br />
+	MSXML2.XMLHTTP<br />
+	MSXML2.XMLHTTP3.0<br />
+	MSXML2.XMLHTTP4.0<br />
+	MSXML2.XMLHTTP5.0<br />
+	MSXML2.XMLHTTP6.0<br />
+	</em></strong>
+    </p>
+    <p>
+        En 2002, l'objet XMLHttpRequest a été repris par le projet Mozilla comme objet natif javascript. Il est ainsi reconnu dès les premières versions de Firefox. Les autres navigateurs ont suivi en commercialisant Safari en 2004, Opéra en 2005.
+
+    </p>
+    <div id="code">
+        <em>Code pour la création d'objet : </em>
+        <pre>
+	<code>
+	var xhr=new ActiveXObject("Microsoft.XMLHTTP");
+		</code>
+	</pre>
+    </div>
+
+</html>

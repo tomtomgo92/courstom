@@ -1,0 +1,5 @@
+taille en largeur du background 920px
+police de caractère open sans
+taille de la police de base dans dans body 16px
+Pour les couleur : mettre le modèle dans firefox
+et avec l'outil pipette echantillner les couleurs

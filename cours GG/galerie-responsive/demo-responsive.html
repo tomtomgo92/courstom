@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>Responsive</title>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500' rel='stylesheet' type='text/css'>
+</head>
+<body>
+	<style scoped="scoped">
+		body{
+			font:16px 'Raleway',sans-serif;
+			margin:0;
+		}
+		h1,h2,p{
+			margin:0;
+			box-sizing:border-box;
+		}
+		h2,p{
+			border-radius: 3px;
+		}
+		h1,h2{
+			font-weight: 300;
+		}
+		h1{
+			line-height: 3.750rem;
+			text-align: center;
+			background: #1565c0;
+			color:#fff;
+			font-weight: 100;
+			margin-bottom:1.875rem;
+		}
+		.content{
+			width:800px;
+			margin:0 auto;
+		}
+
+		a{
+			display: block;
+			width:24.375%;
+			float: left;
+			margin-right:0.625%;
+			
+		}
+		img{
+			display: block;
+			width:100%;
+			border-radius:3px;
+		}
+		img:last-child{
+			margin-right:0;
+		}
+		.galery{
+			overflow: hidden;
+
+		}
+		article>p{
+			line-height: 1.45rem;
+		}
+		article,.galery{
+			margin-bottom:0.625rem;
+		}
+	/*ici commence le responsive*/
+	@media (max-device-width:800px) and (orientation: landscape) {
+		  html {
+			  	-webkit-text-size-adjust: 100%;
+			   -ms-text-size-adjust: 100%;
+		 	}
+		}
+		/*il faut créer la queris pour le reste*/
+	
+	</style>
+	<h1>Démo responsive</h1>
+	<div class="content">
+		<div class="galery">
+			<a href=""><img src="images/00.jpg" alt="image"></a>
+			<a href=""><img src="images/01.jpg" alt="image"></a>
+			<a href=""><img src="images/02.jpg" alt="image"></a>
+			<a href=""><img src="images/03.jpg" alt="image"></a>
+		</div>
+		<article>
+			<h2>Le responsive</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, aspernatur, voluptas expedita asperiores iure iusto eius doloribus molestiae recusandae enim blanditiis voluptatem pariatur tempore sit consequuntur perspiciatis possimus quos? Nam.</p>
+		</article>
+		<article>
+			<h2>La méthode</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, aspernatur, voluptas expedita asperiores iure iusto eius doloribus molestiae recusandae enim blanditiis voluptatem pariatur tempore sit consequuntur perspiciatis possimus quos? Nam.</p>
+		</article>
+	</div>
+</body>
+</html>

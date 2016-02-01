@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,300,600' rel='stylesheet' type='text/css'>
+    <title>Chargement AJAX avec load()</title>
+   
+  </head>
+  <body>
+   <style>
+   body{
+      font:16px 'Raleway',sans-serif;
+      margin:0;
+    }
+      #zone {
+        width: auto;
+        height: 315px;
+       
+      }
+      button{
+        display: block;
+        width:120px;
+        line-height: 30px;
+        text-align: center;
+        margin:10px auto;
+        border:none;
+        background: #0C80D3;
+        color:#fff;
+        
+        border-radius:4px;
+      }
+      button:hover,button:focus{
+        opacity: 0.8;
+        cursor:pointer;
+      }
+    </style>
+   
+    <button id="loading-file">Charger le fichier</button><br/><br/>
+    <div id="zone"></div>
+    <script>
+      $(function(){
+        var myTitre="Ajax loading";
+            $('title').text(myTitre);
+        
+        $('#loading-file').on('click', function(){
+          $('#zone').load('start.html');
+        });
+      });
+    </script>
+  </body>
+</html>

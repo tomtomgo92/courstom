@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+  <title>-Développement-</title>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Tache', 'heures jours'],
+          ['HTML',     15],
+          ['js',      10],
+          ['CSS3',  15],
+          ['php', 10],
+          ['Logiciels',10]
+        ]);
+
+        var options = {
+          title: 'Connaissances en développement',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+		<style type="text/css">
+	body{
+    font:16px 'Roboto',sans-serif;
+    font-size-adjust:0.5;
+    background: #fafafa;
+  }
+  h1{
+    font-family:inherit;
+    font-weight:400;
+    font-size:1.90rem;
+  }
+  #piechart_3d{
+    height: 500px;
+    position: relative;
+    width: 900px;
+    margin:0 auto;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  }
+	</style>
+  </head>
+  <body>
+    <div id="piechart_3d"></div>
+  </body>
+</html>

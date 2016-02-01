@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<title>xmlhttprequest05</title>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="screen.css" media="screen" />
+	</head>
+	<body>
+		<h4>XMLHttpRequest vérification et état de la requête</h4>
+			<div id="code">
+			
+			<button id="btn">Send</button>
+			
+			</div>
+		<div id="printOut">Votre état de la requête...</div>
+			<script type="text/javascript">
+			
+		
+		
+		function getxhr(){
+			var xhr=null;
+	
+		if(window.XMLHttpRequest){
+		var xhr=new XMLHttpRequest();
+		}
+			else if(window.ActiveXObjet){
+			var xhr=new ActiveXObject("Microsoft.XMLHTTP");
+			}
+		else{
+			alert("votre navigateur n'est pas compatible avec AJAX...");
+		
+		}
+	xhr.onreadystatechange=function(){
+	monDiv=document.getElementById("printOut");
+		if(xhr.readyState==4 && xhr.status==200){
+		alert("fichier transmis!");
+		monDiv.innerHTML="L'état de votre requete est "+xhr.status;
+	
+		}
+	}
+	xhr.open("GET","test.txt",true);
+	xhr.send(null);
+	}
+	var btn=document.querySelector("#btn");
+	btn.addEventListener("click",getxhr,false);
+	</script>
+	</body>
+</html>

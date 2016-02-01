@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Html5</title>
+<meta charset="iso-8859-1"> 
+<style type="text/css">
+	video,object{
+		display:block;
+		margin:0 auto;
+		border:solid 1px #000;
+		
+	}
+	figure{
+		display:inline-block;
+		margin:5px;
+		vertical-align:bottom;
+		}
+	figcaption{
+		text-align:center;
+		font-family: "Segoe UI Web Light","Segoe UI Light","Segoe UI Web Regular","Segoe UI","Helvetica Neue",Arial;
+		font-weight:normal;
+		}
+	</style>
+</head>
+<body>
+<video controls>
+	<source src="video_ogv.ogv">
+	<source src="video_mp4.mp4">
+	<source src="video_webm.webm">
+	<object classid="clsid:02BF25D5-8C17-4B23-BC80-D3488ABDDC6B" codebase="http://www.apple.com/qtactivex/qtplugin.cab" width="550" height="338"standby="Chargement...">
+	<param name="src" value="video_mp4.mp4">
+	<param name="type" value="aplication/x-mplayer2">
+	<param name="autoplay" value="false">
+	<param name="quality" value="high">
+	<p>La vidéo ne peut être affichée. Lien vers le <a href="http://www.apple.com/quicktime/download/">plug-in</a> à télécharger ou lien vers le <a href="video_mp4.mp4">fichier vidéo</a> directement.</p>
+	</object>
+<figure>
+</video>
+</body>
+</html>

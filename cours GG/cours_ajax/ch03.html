@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="FR">
+<head>
+<meta charset="utf-8" />
+<title>AJAX cours initiation</title>
+<script type="text/javascript">
+function getXhr(){
+	var requete=null;
+	if(window.XMLHttpRequest){
+		var requete=new XMLHttpRequest();
+	}
+	else if(window.ActiveXObect){
+		var requete=new ActiveXObect("Microsoft.XMLHTTP");
+	}
+	else
+	{
+		alert("Votres navigateur n'est pas compatible avec AJAX");
+	}
+	requete.onreadystatechange=function(){
+	if(requete.readyState==4 && requete.status==200){
+		var item=requete.responseText;
+		var elem=item.split('/');
+		document.getElementById("p1").innerHTML=elem[0];
+		document.getElementById("p2").innerHTML=elem[1];
+		document.getElementById("p3").innerHTML=elem[2];
+		document.getElementById("p4").innerHTML=elem[3];
+		
+	}
+}
+requete.open("GET","items.html",true);
+requete.send(null);
+}
+</script>
+<link href='http://fonts.googleapis.com/css?family=Comfortaa:400,300,700' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+  	 body{
+		font:16px/35px 'Comfortaa',sans-serif;
+	  }
+	  p{
+		width:500px;
+		padding:3px;
+		background-color:#fffde7;
+		border:1px solid #E2C822;
+		display:block;
+		margin:5px auto;
+		line-height:1.45em;
+	}
+	  p#out{
+		width:500px;
+		padding:3px;
+		background-color:#fffde7;
+		border:1px solid #E2C822;
+		margin:5px auto;
+		line-height:1.45em;
+		display:none;
+	}
+	h1{
+		font-weight:100;
+		color: #3A83B6;
+		font-style: italic;
+		width:400px;
+		margin:5px auto;
+		font-size:1.50em;
+		text-align:center;
+	}
+	.strong{
+	color:red;
+
+	}
+	.weak{
+	color:navy;
+
+	}
+	p a{
+		display:block;
+		width:50px;
+		margin:4px;
+		text-decoration:none;
+		color:#666;
+		padding:3px;
+		text-align:center;
+	}
+	p a:hover{
+		text-decoration:underline;
+	}
+	img{
+		display:inline-block;
+		max-width:100%;
+		vertical-align:middle;
+		margin-right:5px;
+		border-radius:50%;
+	}
+	#p1,#p2,#p3,#p4{
+		color:#dd2c00;
+	}
+	input[type="button"]{
+		display:block;
+		border:none;
+		width:120px;
+		line-height:40px;
+		text-align:center;
+		color:#fff;
+		background: #607d8b;
+		font-size:1rem;
+		border-radius:4px;
+	}
+	#formulaire{
+		width:500px;
+		margin:0 auto;
+	}
+  </style>
+</head>
+
+	<body>
+		<h1>AJAX : afficher des coordonnées</h1>
+			<p>
+			Nom : <span id="p1"></span><br />
+			Prénom : <span id="p2"></span><br />
+			Code postal : <span id="p3"></span><br />
+			Ville : <span id="p4"></span><br />
+			</p>
+		<div id="formulaire">
+				<form action="">
+				<input type="button" value="Remplir" onclick="getXhr()" />
+			</form>
+		</div>
+	</body>
+</html>
